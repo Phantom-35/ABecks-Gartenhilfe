@@ -131,6 +131,7 @@ main {
     z-index: 1000; /* Damit er immer im Vordergrund bleibt */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid #167c1b; 
+    position: sticky;
 }
 
 .logo {
@@ -733,7 +734,7 @@ nav a:hover {
 }
 
 
-.übermich-hero {
+.uebermich-hero {
     text-align: center;
     padding: 80px 20px;
     background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
@@ -745,19 +746,19 @@ nav a:hover {
     background-position: center;
 }
 
-.übermich-hero-content {
+.uebermich-hero-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.übermich-hero-content h1 {
+.uebermich-hero-content h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     color:white;
     margin-bottom: 20px;
 }
 
-.übermich-hero-content p {
+.uebermich-hero-content p {
     font-family: 'Lato', sans-serif;
     font-size: 28px;
     line-height: 1.6;
@@ -906,7 +907,7 @@ nav a:hover {
     transition: filter 0.5s ease;
 }
 
-.nahbar-img-container img:hover {
+.nahbar-image:hover {
     filter: grayscale(0%);
 }
 
@@ -1093,9 +1094,17 @@ nav a:hover {
 }
 
 /* --- HERO --- */
+
 .kontakt-hero {
-    text-align: center;
+     text-align: center;
     padding: 80px 20px;
+    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    margin-bottom: 60px;
+    height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('Bilder/hero-index.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
 }
 
@@ -1383,17 +1392,7 @@ input:focus, textarea:focus {
     font-size: 30px;
 }
 
-.kontakt-hero {
-     text-align: center;
-    padding: 80px 20px;
-    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
-    margin-bottom: 60px;
-    height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                      url('Bilder/hero-index.jpg');
-    background-size: cover;
-    background-position: center;
-}
+
 
 /* Responsiv */
 @media (max-width: 850px) {
