@@ -2445,6 +2445,659 @@ input:focus, textarea:focus {
                       url('Bilder/hecke.jpeg');
 }
 
+/* ======================================================================
+   MOBILE EXPERIENCE
+   This layer is intentionally scoped to touch-sized viewports. Desktop
+   rules above remain the source of truth from 769px upward.
+   ====================================================================== */
+@media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: min(100% - 2rem, 1200px);
+    }
+
+    .header {
+        min-height: 68px;
+        padding: 10px 16px;
+        position: sticky;
+        top: 0;
+        gap: 12px;
+    }
+
+    .logo {
+        min-width: 0;
+        gap: 9px;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .logo h1 {
+        min-width: 0;
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+
+    .burger-menu {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        flex-shrink: 0;
+        justify-content: space-between;
+    }
+
+    .burger-menu span {
+        height: 2px;
+    }
+
+    .header nav {
+        position: absolute;
+        inset: 100% 0 auto;
+    }
+
+    .header nav ul {
+        display: none;
+        margin: 0;
+        padding: 10px 16px 18px;
+        gap: 4px !important;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 12px 24px rgba(23, 61, 36, 0.12);
+    }
+
+    .header nav ul.active {
+        display: flex;
+    }
+
+    .header nav li,
+    .header nav a {
+        width: 100%;
+    }
+
+    .header nav a {
+        display: block;
+        min-height: 44px;
+        padding: 11px 12px;
+        border-radius: 7px;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .header nav a:active,
+    .header nav a:focus-visible {
+        background: var(--green-soft);
+    }
+
+    .hero-index,
+    .leistungen-hero,
+    .uebermich-hero,
+    .kontakt-hero {
+        min-height: min(620px, calc(100svh - 68px));
+        height: auto;
+        margin-bottom: 0;
+        padding: 72px 20px 84px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-index-content,
+    .hero-content,
+    .uebermich-hero-content,
+    .kontakt-content {
+        width: 100%;
+    }
+
+    .hero-index-content h2,
+    .uebermich-hero-content h1,
+    .kontakt-hero h1 {
+        font-size: clamp(2.15rem, 10vw, 3rem);
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-index-content p,
+    .uebermich-hero-content p,
+    .hero-content p,
+    .kontakt-hero p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 16px auto 32px;
+    }
+
+    .index-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .index-button-prm,
+    .index-button-sec,
+    .leistungs-teaser a,
+    .galerie a,
+    .cta-button,
+    .nahbar-button {
+        width: min(100%, 340px);
+        min-height: 48px;
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+
+    .leistungs-teaser > a,
+    .galerie > a {
+        margin-top: 20px;
+    }
+
+    .vorstellung,
+    .leistungs-teaser,
+    .warum-abecks,
+    .galerie,
+    .versprechen {
+        padding: 48px 16px !important;
+    }
+
+    .vorstellung h2,
+    .leistungs-teaser h2,
+    .warum-abecks h2,
+    .galerie h2,
+    .versprechen h2,
+    .galerie-hero h2,
+    .vorher-nachher h2,
+    .paket-buchung h2 {
+        margin: 0 auto 20px !important;
+        font-size: clamp(1.8rem, 8vw, 2.35rem) !important;
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    #vorstellung-p,
+    .galerie p,
+    .galerie-intro,
+    .vn-intro {
+        margin: 0 auto 32px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .index-aufsitz,
+    .container-warum,
+    .hinterstecken,
+    .leistung-detail,
+    .leistung-detail.reverse {
+        flex-direction: column !important;
+        gap: 28px !important;
+        padding: 48px 16px !important;
+    }
+
+    .container-warum {
+        margin-bottom: 24px;
+    }
+
+    .leistung-detail,
+    .leistung-detail.reverse {
+        margin-bottom: 24px;
+    }
+
+    .aufsitz-text,
+    .aufsitz-image,
+    .container-warum-image,
+    .container-warum-text,
+    .hinterstecken-text,
+    .hinterstecken-bild,
+    .leistung-bild,
+    .leistung-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .aufsitz-text h3,
+    .hinterstecken-text h2 {
+        padding: 0;
+        margin: 0 0 14px;
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .aufsitz-text p,
+    .hinterstecken-text p {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .aufsitz-image img,
+    .leistung-bild img {
+        height: 240px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .container-warum-image img,
+    .hinterstecken-bild img {
+        border-radius: 12px;
+    }
+
+    .angebote-container,
+    .versprechen-container,
+    .zusatz-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px !important;
+        padding: 0;
+    }
+
+    .angebote-card,
+    .versprechen-card,
+    .zusatz-card {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 24px 20px;
+    }
+
+    .angebote-card h4,
+    .versprechen-card h4,
+    .zusatz-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .angebote-card p,
+    .versprechen-card p,
+    .zusatz-card p,
+    .leistung-text p,
+    .leistung-liste li {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .container-warum-text li,
+    .leistung-liste li {
+        margin: 0 0 14px;
+        padding-left: 30px;
+        align-items: flex-start;
+    }
+
+    .index-bilder-container,
+    .vn-bilder {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .index-bilder-container {
+        margin-bottom: 0;
+    }
+
+    #bild1,
+    #bild2,
+    .vn-bild-container {
+        width: 100%;
+    }
+
+    #bild1 img,
+    #bild2 img,
+    .vn-bild-container img {
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    .galerie-hero,
+    .vorher-nachher {
+        padding: 48px 16px !important;
+    }
+
+    .versprechen {
+        margin-top: 0;
+    }
+
+    .galerie-page-hero {
+        min-height: min(440px, calc(100svh - 68px));
+    }
+
+    .leistungen-hero,
+    .uebermich-hero,
+    .kontakt-hero {
+        min-height: min(480px, calc(100svh - 68px));
+    }
+
+    .slider-wrapper {
+        height: min(72vw, 320px);
+        min-height: 240px;
+        width: 100%;
+    }
+
+    .slide {
+        width: calc(100% - 56px);
+        border-radius: 12px;
+    }
+
+    .slider-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .vn-projekt {
+        padding: 22px 16px;
+        margin-bottom: 28px;
+    }
+
+    .vn-text h3 {
+        font-size: 1.35rem;
+    }
+
+    .badge {
+        bottom: 12px;
+        left: 12px;
+        padding: 7px 14px;
+        font-size: 0.8rem;
+    }
+
+    .kontakt-grid-container {
+        flex-direction: column;
+        gap: 36px;
+        margin: 0 auto 48px;
+        padding: 48px 16px 0;
+    }
+
+    .kontakt-info h3 {
+        font-size: 1.55rem;
+    }
+
+    .info-links {
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .info-card {
+        min-height: 54px;
+        padding: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .kontakt-formular {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    input,
+    textarea,
+    .submit-btn {
+        min-height: 48px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        min-height: 140px;
+    }
+
+    .paket-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .paket-card {
+        padding: 18px;
+    }
+
+    .paket-features {
+        grid-template-columns: 1fr;
+    }
+
+    .map-placeholder img {
+        height: 260px;
+    }
+
+    .radius-circle {
+        width: 145px;
+        height: 145px;
+    }
+
+    .legal-page {
+        padding: 48px 16px;
+    }
+
+    .legal-nav {
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        margin-bottom: 28px;
+    }
+
+    .legal-divider {
+        margin: 36px 0;
+    }
+
+    .main-footer {
+        margin-top: 48px;
+        padding: 44px 16px 18px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 0;
+    }
+
+    .footer-column ul {
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+        margin-top: 32px;
+    }
+
+    .nahbar {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 32px 16px 0;
+        padding: 28px 20px;
+        border-radius: 12px;
+    }
+
+    .nahbar-image {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo h1 {
+        font-size: 0.9rem;
+    }
+
+    .hero-index,
+    .leistungen-hero,
+    .uebermich-hero,
+    .kontakt-hero {
+        padding-inline: 16px !important;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide,
+    .burger-menu span,
+    .angebote-card,
+    .versprechen-card,
+    .info-card {
+        transition: none;
+    }
+}
+
+/* Mobile refinement for the booking funnel */
+@media (max-width: 768px) {
+    .paket-buchung {
+        padding: 52px 16px 0;
+    }
+
+    .paket-buchung > p {
+        max-width: 30rem;
+        margin: 0 auto 28px;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .allround-paket-section {
+        padding: 0;
+        background: transparent;
+    }
+
+    .allround-paket-section .container {
+        width: 100%;
+    }
+
+    .paket-box-wrapper {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .paket-image {
+        min-height: 176px;
+        height: 176px;
+    }
+
+    .paket-image img {
+        height: 100%;
+    }
+
+    .badge-bestseller {
+        top: 14px;
+        left: 14px;
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+
+    .paket-content {
+        padding: 24px 20px 22px;
+    }
+
+    .paket-content h2 {
+        margin: 0 0 14px !important;
+        font-size: 1.6rem !important;
+        line-height: 1.18;
+        text-align: left;
+    }
+
+    .paket-intro {
+        margin: 0 0 20px;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .paket-checkliste {
+        display: grid;
+        gap: 0;
+        margin: 0 0 24px;
+    }
+
+    .paket-checkliste li {
+        align-items: flex-start;
+        gap: 10px;
+        padding: 11px 0;
+        border-top: 1px solid #edf2ed;
+        font-size: 0.98rem;
+        line-height: 1.45;
+    }
+
+    .paket-checkliste li:last-child {
+        border-bottom: 1px solid #edf2ed;
+    }
+
+    .paket-checkliste .check-icon {
+        flex: 0 0 18px;
+        line-height: 1.45;
+    }
+
+    .paket-action {
+        margin-top: 4px;
+    }
+
+    .paket-action a {
+        display: flex;
+        width: 100%;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 16px;
+        text-align: center;
+        line-height: 1.25;
+    }
+
+    .einzelleistungen-section {
+        padding: 48px 0 0;
+    }
+
+    .einzelleistungen-titel {
+        margin: 0 0 8px;
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    .einzelleistungen-untertitel {
+        margin: 0 auto 24px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .einzelleistungen-grid {
+        gap: 16px;
+    }
+
+    .einzelleistung-card {
+        border-radius: 10px;
+    }
+
+    .card-image {
+        height: 156px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-secondary {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /* Finales Designsystem */
 :root {
     --green-deep: #173d24;
