@@ -1,6 +1,6 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('burgerBtn');
-  const navUl = document.querySelector('header nav ul');
+  const navUl = document.querySelector('#main-navigation ul');
 
   if (burgerBtn && navUl) {
     burgerBtn.type = 'button';
@@ -29,7 +29,7 @@
     laubbeseitigung: ['Ihre Leistungsauswahl', 'Laubbeseitigung', 'Nach Aufwand', ['Rasen- & Beetflächen säubern', 'Abtransport & Entsorgung']]
   };
   const params = new URLSearchParams(location.search);
-  const selected = data[params.get('paket') || params.get('leistung')];
+  const selected = data[params.get('paket')] || data[params.get('leistung')];
   if (selected) {
     const [badgeText, titleText, priceText, featureTexts] = selected;
     document.getElementById('paket-spezifikation')?.style.setProperty('display', 'block');
@@ -56,15 +56,33 @@
     event.preventDefault();
     const button = form.querySelector('.submit-btn');
     const originalText = button?.textContent || 'Anfrage absenden';
+    let errorMessage = document.getElementById('form-error');
+    if (!errorMessage) {
+      errorMessage = document.createElement('p');
+      errorMessage.id = 'form-error';
+      errorMessage.className = 'form-error';
+      errorMessage.setAttribute('role', 'alert');
+      errorMessage.setAttribute('tabindex', '-1');
+      form.prepend(errorMessage);
+    }
+    errorMessage.hidden = true;
     if (button) { button.textContent = 'Wird gesendet…'; button.disabled = true; }
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
     try {
-      const response = await fetch(form.action, { method: form.method || 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const response = await fetch(form.action, { method: form.method || 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, signal: controller.signal });
       if (!response.ok) throw new Error('send failed');
       form.style.display = 'none';
       successMessage.style.display = 'block';
+      successMessage.setAttribute('tabindex', '-1');
+      successMessage.focus();
     } catch {
-      alert('Die Nachricht konnte nicht versendet werden. Bitte versuchen Sie es erneut.');
+      errorMessage.textContent = 'Die Nachricht konnte nicht versendet werden. Bitte versuchen Sie es erneut oder nutzen Sie Telefon oder E-Mail.';
+      errorMessage.hidden = false;
+      errorMessage.focus();
       if (button) { button.textContent = originalText; button.disabled = false; }
+    } finally {
+      window.clearTimeout(timeout);
     }
   });
 
@@ -73,11 +91,14 @@
   const nextBtn = document.querySelector('.next-btn');
   if (slides.length > 1 && prevBtn && nextBtn) {
     let currentIndex = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
+    const status = document.querySelector('.slider-status');
     const updateSlider = () => {
       slides.forEach(slide => slide.classList.remove('active', 'prev', 'next'));
       slides[currentIndex].classList.add('active');
       slides[(currentIndex - 1 + slides.length) % slides.length].classList.add('prev');
       slides[(currentIndex + 1) % slides.length].classList.add('next');
+      slides.forEach((slide, index) => slide.setAttribute('aria-hidden', String(index !== currentIndex)));
+      if (status) status.textContent = `Bild ${currentIndex + 1} von ${slides.length}: ${slides[currentIndex].alt}`;
     };
     prevBtn.type = 'button'; nextBtn.type = 'button';
     prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + slides.length) % slides.length; updateSlider(); });

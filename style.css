@@ -96,7 +96,7 @@
     --hauptfarbe: #146129;
     --textfarbe: #3c413c;
     --unterüberschriften: #1a5c2b;
-    --buttons: #16c54a;
+    --buttons: #146129;
     --cardgrey: #ffffff;
     --surface: #ffffff;
 }
@@ -1275,6 +1275,33 @@ input:focus, textarea:focus {
     border-color: var(--unterüberschriften, #4CAF50);
 }
 
+input:focus-visible, textarea:focus-visible,
+button:focus-visible, a:focus-visible, select:focus-visible {
+    outline: 3px solid #f2b134;
+    outline-offset: 3px;
+}
+
+.logo-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.form-error {
+    margin: 0 0 20px;
+    padding: 12px 14px;
+    color: #8a1c1c;
+    background: #fff1f1;
+    border: 1px solid #d46a6a;
+    border-radius: 8px;
+}
+
+.slider-status {
+    margin: 16px auto 0;
+    max-width: 40rem;
+    text-align: center;
+    color: var(--textfarbe);
+}
+
 .submit-btn {
     width: 100%;
     padding: 15px;
@@ -2097,7 +2124,7 @@ input:focus, textarea:focus {
 .index-button-prm,
 .index-button-sec {
     flex: 1;                  /* Beide Buttons teilen sich den Platz 50/50 auf */
-    max-width: 280px;         /* Begrenzung, damit sie auf großen Bildschirmen nicht zu breit werden */
+    max-width: 300px;         /* Begrenzung, damit sie auf großen Bildschirmen nicht zu breit werden */
     text-align: center;       /* Text genau mittig ausrichten */
     box-sizing: border-box;   /* Rechnet Rahmendicke in die Gesamthöhe/-breite ein */
     
@@ -3136,11 +3163,17 @@ h1, h2, h3, h4,
 }
 
 .hero-index-content h2 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.hero-index-content h1 {
+    margin: 0 auto;
+    font-size: 70px;
 }
 
 .hero-index-content p {
-    font-size: clamp(1.25rem, 3vw, 1.9rem);
+    font-size: 30px;
+    margin: 10px auto 70px;
 }
 
 .vorstellung h2,
@@ -3214,7 +3247,13 @@ h1, h2, h3, h4,
 
 .index-button-prm,
 .index-button-sec {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    flex: 0 0 323px;
+    width: 323px;
+    max-width: 323px;
+    min-width: 323px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 .kontakt-grid-container {
@@ -3311,7 +3350,10 @@ h1, h2, h3, h4,
 
     .index-button-prm,
     .index-button-sec {
+        flex: 1 1 auto;
+        width: auto;
         max-width: none;
+        min-width: 0;
     }
 
     .slider-wrapper {
@@ -3324,8 +3366,20 @@ h1, h2, h3, h4,
 }
 
 @media (max-width: 480px) {
-    .hero-index-content h2 {
-        font-size: 2.25rem;
+    .hero-index-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-index-content p {
+        font-size: 1.9rem;
+        margin-bottom: 40px;
+    }
+
+    .index-button-prm,
+    .index-button-sec {
+        width: min(100%, 380px);
+        padding: 16px 28px;
+        font-size: 1.25rem;
     }
 
     .uebermich-hero-content h1,

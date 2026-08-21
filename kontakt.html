@@ -7,6 +7,18 @@
   <meta name="description"
     content="Jetzt Kontakt zu ABecks Gartenarbeit in Meckenheim aufnehmen. Schnelle Anfrage per Kontaktformular, Telefon oder E-Mail – wir beraten Sie gerne!">
   <title>ABecks Gartenarbeit | Kontakt</title>
+  <link rel="canonical" href="https://abecks-gartenhilfe.netlify.app/kontakt.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="ABecks Gartenarbeit">
+  <meta property="og:title" content="Kontakt | ABecks Gartenarbeit in Meckenheim">
+  <meta property="og:description" content="Kontaktieren Sie ABecks Gartenarbeit für Gartenpflege in Meckenheim und Umgebung.">
+  <meta property="og:url" content="https://abecks-gartenhilfe.netlify.app/kontakt.html">
+  <meta property="og:image" content="https://abecks-gartenhilfe.netlify.app/Bilder/hero-index.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kontakt | ABecks Gartenarbeit in Meckenheim">
+  <meta name="twitter:description" content="Unverbindliche Anfrage für Gartenpflege in Meckenheim und Umgebung.">
+  <meta name="twitter:image" content="https://abecks-gartenhilfe.netlify.app/Bilder/hero-index.jpg">
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="Bilder/logo.ico" type="image/x-icon" />
 </head>
@@ -15,22 +27,22 @@
   <header class="header">
     <div class="logo">
       <img src="Bilder/logo.jpeg" alt="Logo" />
-      <h1>ABecks Gartenarbeit</h1>
+      <span class="logo-name">ABecks Gartenarbeit</span>
     </div>
 
-    <button class="burger-menu" id="burgerBtn" aria-label="Menü öffnen">
+    <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <nav>
+    <nav id="main-navigation" aria-label="Hauptnavigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="leistungen.html">Leistungen</a></li>
         <li><a href="uebermich.html">Über mich</a></li>
         <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +61,7 @@
     <section class="kontakt-grid-container">
       <!-- Linke Seite: Direkte Kontaktwege -->
       <div class="kontakt-info">
-        <h3>Direkter Kontakt</h3>
+        <h2>Direkter Kontakt</h2>
         <p>
           Sie haben es eilig? Dann rufen Sie mich am besten direkt an oder
           schreiben Sie mir eine WhatsApp.
@@ -159,17 +171,17 @@
 
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Ihr Name" required />
+              <input type="text" id="name" name="name" placeholder="Ihr Name" autocomplete="name" required />
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" placeholder="ihre@mail.de" required />
+                <input type="email" id="email" name="email" placeholder="ihre@mail.de" autocomplete="email" required />
               </div>
               <div class="form-group">
                 <label for="telefon">Telefonnummer</label>
-                <input type="tel" id="telefon" name="telefon" placeholder="0176 / ..." required />
+                <input type="tel" id="telefon" name="telefon" placeholder="0176 / ..." autocomplete="tel" required />
               </div>
             </div>
 
@@ -324,6 +336,8 @@
       </div>
     </section>
 
+  </main>
+
     <footer class="main-footer">
       <div class="footer-container">
         <div class="footer-column">
@@ -354,7 +368,6 @@
         <p>© 2026 ABecks | Alle Rechte vorbehalten</p>
       </div>
     </footer>
-  </main>
 
   <script src="script.js"></script>
 </body>
