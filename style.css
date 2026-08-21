@@ -1,0 +1,2357 @@
+/* ==========================================
+   LOKALE SCHRIFTARTEN (DSGVO-KONFORM)
+   ========================================== */
+
+   /* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/montserrat-v31-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/lato-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/lato-v25-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/lato-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/roboto-v51-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/roboto-v51-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/roboto-v51-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* cherry-cream-soda-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cherry Cream Soda';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/cherry-cream-soda-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+
+
+
+:root {
+    --hauptfarbe: rgb(20, 97, 41);
+    --textfarbe: rgb(60, 65, 60);
+    --unterüberschriften: rgb(26, 92, 43);
+    --buttons: rgb(22, 197, 74);
+    --cardgrey: #f8fff8;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Erzeugt einen edlen Milchglas-Effekt */
+    
+    /* Damit er ÜBER dem Bild schwebt: */
+    
+    top: 0;
+    z-index: 1000; /* Damit er immer im Vordergrund bleibt */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #167c1b; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--hauptfarbe);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap:40px;
+    list-style: none;
+    margin-right: 50px;
+    padding: 0;
+}
+
+nav a {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--hauptfarbe);
+}
+
+.hero-index {
+    height: 80vh; /* Oder 100vh für den ganzen Bildschirm */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('Bilder/hero-index.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Flexbox bleibt, um den Text in der Mitte zu halten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 70px auto;
+}
+
+.hero-index-content {
+    color: white;
+    text-align: center;
+}
+
+.hero-index-content h2 {
+    font-size: 60px;
+    font-family: Montserrat;
+    margin: 0 auto 0 auto;
+}
+
+.hero-index-content p {
+    font-size: 30px;
+    font-family: Lato, sans-serif;
+    margin: 10px auto 70px auto;
+}
+
+.hero-index-content span {
+    color: var(--buttons);
+}
+
+.vorstellung h2 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+}
+
+.vorstellung span {
+    color: var(--hauptfarbe);
+}
+
+#vorstellung-p {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    margin: 20px auto 90px auto;
+    color: var(--textfarbe);
+    max-width: 1200px;
+}
+
+.index-aufsitz {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Mehr Platz zwischen Text und Bild */
+    padding: 80px 4%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
+    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+}
+
+.aufsitz-text {
+    flex: 1;
+}
+
+.aufsitz-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--unterüberschriften); /* Dein dunkles Grün */
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.aufsitz-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.6; /* Mehr Zeilenabstand für bessere Lesbarkeit */
+    color: var(--textfarbe);
+    text-align: left; /* Linksbündig wirkt sauberer */
+    padding: 20px;
+}
+
+.highlight {
+    color: #4CAF50; /* Ein schönes Akzent-Grün */
+    font-weight: bold;
+}
+
+.aufsitz-image {
+    flex: 1;
+}
+
+.aufsitz-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12); /* Weicher Schatten für Tiefe */
+    display: block;
+}
+
+.leistungs-teaser {
+    text-align: center;
+}
+
+.leistungs-teaser h2 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    margin: 90px auto 50px auto;
+}
+
+.leistungs-teaser span {
+    color: var(--unterüberschriften);
+}
+
+/* 1. Der Container, der alle Karten umschließt */
+.angebote-container {
+    display: flex;
+    gap: 60px;                 /* Ein gleichmäßiger Abstand zwischen allen Karten */
+    justify-content: center;   /* Zentriert die Karten in der Reihe */
+    flex-wrap: wrap;           /* WICHTIG: Erlaubt den Karten, in die nächste Zeile zu springen, statt zu quetschen */
+}
+
+/* 2. Die einzelnen Karten (dein Code erweitert) */
+.angebote-card {
+    flex: 1 1 250px;           /* NEU: Flex-Grow (verteilen), Flex-Shrink (verkleinern) und Basis-Breite von 250px */
+    max-width: 320px;          /* NEU: Verhindert, dass eine Karte riesig wird, wenn sie in eine neue Reihe springt */
+    background-color: var(--cardgrey);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 60px;       /* Auf 30px angepasst, damit der Abstand nach unten exakt dem 'gap' entspricht, wenn sie umbrechen */
+}
+
+.angebote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.angebote-card svg {
+    width: 50px; 
+    height: 50px;
+    margin-bottom: 20px;
+    color: var(--hauptfarbe)
+}
+
+.angebote-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin: 0 auto 10px auto;
+    transition: all 0.3s ease;
+}
+
+.angebote-card h4:hover {
+    color: var(--hauptfarbe);
+}
+
+.angebote-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.leistungs-teaser a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--buttons);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 70px;   
+}
+
+.leistungs-teaser a:hover {
+    background-color: #167c1b;
+}
+
+.warum-abecks h2 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    margin: 90px auto 50px auto;
+}
+
+.warum-abecks span {
+    color: var(--hauptfarbe);
+}
+
+.container-warum {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Mehr Platz zwischen Text und Bild */
+    padding: 80px 10%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
+    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    margin-bottom: 150px;
+}
+
+.container-warum-image {
+    flex: 1;
+}
+
+.container-warum-text {
+    flex: 1;
+}
+
+.container-warum-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12); /* Weicher Schatten für Tiefe */
+    display: block;
+}
+
+.container-warum-text li {
+    position: relative;
+    padding-left: 35px; /* Platz für den Haken schaffen */
+    margin-bottom: 20px; /* Hier stellst du den Platz ZWISCHEN den Punkten ein */
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.container-warum-text li::before {
+    content: '✓'; /* Das Unicode-Häkchen */
+    position: absolute;
+    left: 0;
+    color: #4CAF50; /* Dein Grün-Ton */
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container-warum-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.galerie h2 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    margin: 90px auto 50px auto;
+}
+
+.galerie span {
+    color: var(--unterüberschriften);
+}
+
+.galerie p {
+    font-size: 25px;
+    font-family: Lato, sans-serif;
+    margin: 10px auto 70px auto;
+    text-align: center;
+}
+
+.index-bilder-container {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Mehr Platz zwischen Text und Bild */
+    padding: 80px;
+    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    margin-bottom: 60px;
+}
+
+#bild1 {
+    flex: 1;
+}
+
+#bild2 {
+    flex: 1;
+}
+
+#bild1 img, #bild2 img {
+    width: 100%;
+    /* Hier legst du die feste Höhe fest */
+    height: 400px; 
+    /* Das ist der wichtigste Teil: Er schneidet das Bild passend zu, ohne es zu quetschen */
+    object-fit: cover; 
+    
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    display: block;
+}
+
+.galerie a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--buttons);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 2px;
+
+}
+
+.galerie a:hover {
+    background-color: #167c1b;
+}
+
+.galerie {
+    text-align: center;
+}
+
+.bewertung-section {
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+
+/* Styling für den Google-Bewertungs-Button */
+.google-review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #202124;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;             /* Schöne abgerundete Pille */
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* Hover-Effekt beim Drüberfahren */
+.google-review-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border-color: #cccccc;
+}
+
+.google-icon {
+    flex-shrink: 0;
+}
+
+.google-text {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-family: 'Google Sans', 'Product Sans', 'Roboto', Arial, sans-serif;
+}
+
+/* Die exakten originalen Google-Farben */
+.g-blue   { color: #4285F4; }
+.g-red    { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green  { color: #34A853; }
+
+
+/* --- HERO BEREICH --- */
+.leistungen-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    margin-bottom: 60px;
+    height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('Bilder/hero-index.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: white;
+}
+
+/* --- DETAIL BEREICH (Bild + Text) --- */
+.leistung-detail {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+/* Der Zaubertrick für das abwechselnde Layout */
+.leistung-detail.reverse {
+    flex-direction: row-reverse;
+}
+
+.leistung-bild, .leistung-text {
+    flex: 1;
+}
+
+.leistung-bild img {
+    width: 100%;
+    height: 400px; /* Festgelegte Höhe für sauberes Layout */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.leistung-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #2d332d;
+    margin-bottom: 20px;
+}
+
+.leistung-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Die Liste mit den Checkmarks */
+.leistung-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leistung-liste li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.leistung-liste li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* --- ZUSATZLEISTUNGEN (Grid) --- */
+.zusatz-leistungen {
+    padding: 60px 10%;
+    background-color: #f9faf9;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.zusatz-leistungen h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.zusatz-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.zusatz-card {
+    flex: 1;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.zusatz-card svg {
+    margin-bottom: 20px;
+}
+
+.zusatz-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.zusatz-card p {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+}
+
+/* --- CALL TO ACTION BEREICH --- */
+.leistungen-cta {
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--buttons, #4CAF50); /* Falls du deine Variable hast */
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #388E3C;
+}
+
+/* --- RESPONSIVE DESIGN (Für Handys) --- */
+@media (max-width: 900px) {
+    .leistung-detail, .leistung-detail.reverse {
+        flex-direction: column; /* Bild und Text stehen untereinander */
+        gap: 30px;
+        padding: 0 5%;
+    }
+    
+    .zusatz-grid {
+        flex-direction: column; /* Karten stehen untereinander */
+    }
+}
+
+
+.übermich-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    margin-bottom: 60px;
+    height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('Bilder/hero-index.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.übermich-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.übermich-hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.übermich-hero-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    line-height: 1.6;
+    color: white;
+}
+
+.hinterstecken {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Mehr Platz zwischen Text und Bild */
+    padding: 80px 3%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
+    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+}
+
+.hinterstecken-text {
+    flex: 1;
+}
+
+.hinterstecken-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--unterüberschriften); /* Dein dunkles Grün */
+    font-size: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.hinterstecken-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.6; /* Mehr Zeilenabstand für bessere Lesbarkeit */
+    color: var(--textfarbe);
+    text-align: left; /* Linksbündig wirkt sauberer */
+    padding: 20px;
+}
+
+.hinterstecken-bild {
+    flex: 1;
+}
+
+.hinterstecken-bild img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12); /* Weicher Schatten für Tiefe */
+    display: block;
+}
+
+.versprechen {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.versprechen h2 {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    margin: 90px auto 50px auto;
+}
+
+.versprechen span {
+    color: var(--unterüberschriften);
+}
+
+.versprechen-container {
+    display: flex;
+    align-items: stretch; /* Sorgt dafür, dass alle Karten in einer Reihe gleich hoch sind */
+    flex-direction: row; /* Standard, aber sicherheitshalber */
+    flex-wrap: nowrap;   /* Verhindert das Umspringen in die nächste Zeile */
+    gap: 30px;           /* Weniger Abstand lässt mehr Platz für die Karten */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.versprechen-card {
+    background-color: var(--cardgrey);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 60px;
+    flex: 1;
+    min-width: 0;
+}
+
+.versprechen-card:hover {
+    transform: translateY(-5px);
+}
+
+.versprechen-card svg {
+    width: 50px; 
+    height: 50px;
+    margin-bottom: 20px;
+    color: var(--hauptfarbe)
+}
+
+.versprechen-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin: 0 auto 10px auto;
+    transition: all 0.3s ease;
+}
+
+.versprechen-card h4:hover {
+    color: var(--hauptfarbe);
+}
+
+.versprechen-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.nahbar h2 {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 45px;
+    margin: 90px auto 50px auto;
+}
+
+.nahbar {
+    margin-top: 130px;
+}
+
+.nahbar span {
+    color: var(--unterüberschriften);
+}
+
+.nahbar-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+}
+
+.nahbar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.5s ease;
+}
+
+.nahbar-img-container img:hover {
+    filter: grayscale(0%);
+}
+
+/* --- SLIDER BEREICH --- */
+.galerie-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9faf9;
+}
+
+.galerie-hero h2, .vorher-nachher h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.galerie-hero span, .vorher-nachher span {
+    color: var(--unterüberschriften, #4CAF50);
+}
+
+.galerie-intro, .vn-intro {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+/* Der Container für den 3D-Effekt */
+.slider-wrapper {
+    position: relative;
+    height: 500px; /* Höhe des Sliders */
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Schneidet Bilder ab, die zu weit außen sind */
+}
+
+.slider-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Grundeinstellung für ALLE Bilder im Slider */
+.slide {
+    position: absolute;
+    width: 60%; /* Breite des Hauptbildes */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    /* Zentriert das Bild und macht es unsichtbar */
+    transform: translate(-50%, -50%) scale(0.5); 
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s ease-in-out; /* Weiche Animation */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Das aktive (mittlere) Bild */
+.slide.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10;
+}
+
+/* Das linke (vorherige) Bild */
+.slide.prev {
+    opacity: 0.6;
+    /* Schiebt es nach links (-110%) und macht es kleiner (scale 0.8) */
+    transform: translate(-110%, -50%) scale(0.8);
+    z-index: 5;
+}
+
+/* Das rechte (nächste) Bild */
+.slide.next {
+    opacity: 0.6;
+    /* Schiebt es nach rechts (10%) und macht es kleiner (scale 0.8) */
+    transform: translate(10%, -50%) scale(0.8);
+    z-index: 5;
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hauptfarbe, #2d332d);
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: var(--buttons, #4CAF50);
+    color: white;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* --- VORHER / NACHHER BEREICH --- */
+.vorher-nachher {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vn-projekt {
+    margin-bottom: 80px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.vn-text {
+    margin-bottom: 30px;
+    font-family: Lato, sans-serif;
+    color: var(--textfarbe);
+}
+
+.vn-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.vn-bilder {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.vn-bild-container {
+    position: relative;
+    flex: 1;
+}
+
+.vn-bild-container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Die kleinen Schilder auf den Bildern */
+.badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.badge.vorher { background-color: #e74c3c; /* Rot für Vorher */ }
+.badge.nachher { background-color: #2ecc71; /* Grün für Nachher */ }
+
+/* Responsiv für Handys */
+@media (max-width: 800px) {
+    .slide { width: 80%; }
+    .slide.prev { transform: translate(-100%, -50%) scale(0.8); opacity: 0; } /* Auf dem Handy verstecken wir die Ränder besser */
+    .slide.next { transform: translate(0%, -50%) scale(0.8); opacity: 0; }
+    .vn-bilder { flex-direction: column; }
+}
+
+/* --- HERO --- */
+.kontakt-hero {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.kontakt-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+}
+
+.kontakt-hero p {
+    font-family: Lato;
+    font-size: 20px;
+}
+
+.kontakt-hero span {
+    color: rgb(26, 202, 26);
+}
+
+/* --- GRID LAYOUT --- */
+.kontakt-grid-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+}
+
+.kontakt-info, .kontakt-formular {
+    flex: 1;
+}
+
+.kontakt-info p {
+    font-family: Lato, sans-serif;
+}
+
+/* --- INFO CARDS (Links) --- */
+.kontakt-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--cardgrey, #f4f4f4);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.info-card svg {
+    color: var(--unterüberschriften, #4CAF50);
+}
+
+.info-card:hover {
+    background: #e8e8e8;
+    transform: translateX(10px);
+}
+
+/* --- FORMULAR STYLING --- */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--unterüberschriften, #4CAF50);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--buttons, #4CAF50);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #388E3C;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- CUSTOM DSGVO CHECKBOX --- */
+.checkbox-group {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: var(--textfarbe, #3c413c);
+    line-height: 1.5;
+    user-select: none;
+}
+
+/* Verstecke die hässliche Standard-Browser-Checkbox */
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Das eigene gestaltete Kästchen */
+.custom-checkbox {
+    position: relative;
+    top: 2px;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+/* Hover-Effekt beim Drüberfahren */
+.checkbox-label:hover input ~ .custom-checkbox {
+    border-color: var(--buttons, #16c54a);
+    background-color: #f4fff6;
+}
+
+/* Style wenn die Checkbox ANGEHAKT ist */
+.checkbox-label input:checked ~ .custom-checkbox {
+    background-color: var(--buttons, #16c54a);
+    border-color: var(--buttons, #16c54a);
+    box-shadow: 0 3px 8px rgba(22, 197, 74, 0.3);
+}
+
+/* Erzeuge das weiße Häkchen (✓) */
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+}
+
+/* Häkchen anzeigen wenn abgehakt */
+.checkbox-label input:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+/* Fokus-Effekt (für Tastatur-Navigation / Barrierefreiheit) */
+.checkbox-label input:focus-visible ~ .custom-checkbox {
+    outline: 2px solid var(--hauptfarbe, #146129);
+    outline-offset: 2px;
+}
+
+/* Links & Sternchen Styling */
+.checkbox-text a {
+    color: var(--hauptfarbe, #146129);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.checkbox-text a:hover {
+    color: var(--buttons, #16c54a);
+}
+
+.required-asterisk {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* --- MAP & RADIUS --- */
+.einsatzbereich {
+    background-color: #f9faf9;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.einsatz-text {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.einsatz-text p {
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+}
+
+.einsatz-text h2 {
+    font-family: Montserrat;
+    font-size: 40px;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.map-placeholder {
+    position: relative;
+    line-height: 0;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    filter: grayscale(40%);
+}
+
+/* Der Radius-Kreis Effekt */
+.radius-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: rgba(76, 175, 80, 0.2);
+    border: 3px solid rgba(76, 175, 80, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.location-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 30px;
+}
+
+.kontakt-hero {
+     text-align: center;
+    padding: 80px 20px;
+    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    margin-bottom: 60px;
+    height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('Bilder/hero-index.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsiv */
+@media (max-width: 850px) {
+    .kontakt-grid-container {
+        flex-direction: column;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.legal-page {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.legal-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* Kleine Navigation oben */
+.legal-nav {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.legal-nav a {
+    text-decoration: none;
+    color: var(--unterüberschriften);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.legal-nav a:hover {
+    border-bottom: 2px solid var(--unterüberschriften);
+}
+
+.legal-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 60px 0;
+}
+
+.legal-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.legal-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    color: #2d332d;
+}
+
+.legal-section p {
+    font-family: 'Lato', sans-serif;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.legal-section li {
+    font-family: 'Lato', sans-serif;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.main-footer {
+    background-color: #1a1a1a; /* Ein edles Dunkelgrau */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 100px; /* Abstand zu den Rezept-Karten */
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-family: 'Cherry Cream Soda', cursive;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--hauptfarbe); /* Dein Akzent-Rot */
+}
+
+.footer-column h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #cccccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: var(--unterüberschriften); /* Hover-Farbe */
+    padding-left: 5px; /* Kleiner cooler Effekt */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #777;
+}
+
+
+
+
+/* Sektion Kundenstimmen */
+.kundenstimmen-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+}
+
+.kundenstimmen-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.kundenstimmen-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.kundenstimmen-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #2d332d;
+    margin-bottom: 15px;
+}
+
+.rating-badge {
+    display: inline-block;
+    background-color: var(--cardgrey, #f4f6f4);
+    color: #2d332d;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Bewertungskarten Grid */
+.bewertungen-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bewertung-card {
+    flex: 1 1 300px;
+    max-width: 360px;
+    background-color: var(--cardgrey, #f4f6f4);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bewertung-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+    color: #fbc02d; /* Gold-gelbe Sterne */
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.bewertung-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.bewertung-autor {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #2d332d;
+}
+
+.bewertung-autor strong {
+    font-weight: 700;
+}
+
+.bewertung-autor span {
+    color: #777;
+    font-weight: 400;
+}
+
+/* --- BURGER MENU STYLING --- */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 26px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--hauptfarbe, #146129);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+/* ==========================================================================
+   ALLROUND-PAKET & DYNAMISCHE BUCHUNG (Leistungen & Kontakt)
+   ========================================================================== */
+
+/* --- 1. Allround-Paket Sektion (leistungen.html) --- */
+.allround-paket-section {
+  padding: 60px 0;
+  background-color: #f8fafc;
+}
+
+.paket-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid #22c55e; /* Grüner Blickfang-Rahmen */
+  max-width: 1100px;
+  margin: 0 auto;
+    /* deine restlichen Styles bleiben bestehen */
+}
+
+.paket-image {
+  flex: 1 1 400px;
+  position: relative;
+  min-height: 300px;
+}
+
+.paket-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge-bestseller {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #22c55e;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Lato', sans-serif;
+}
+
+.paket-content {
+  flex: 1 1 450px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paket-content h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-intro {
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+.paket-checkliste {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.paket-checkliste li {
+  padding: 8px 0;
+  color: #334155;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-action {
+  margin-top: auto;
+}
+
+
+/* --- 2. Dynamische Paket-Card (kontakt.html) --- */
+.paket-card {
+  background: #213f21; /* Edler dunkler Hintergrund */
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.paket-header {
+  border-bottom: 1px solid #032307;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.paket-badge {
+  display: inline-block;
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  font-family: 'Roboto', sans-serif;
+}
+
+.paket-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.paket-title-row h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-preis {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f83838; /* Hellblau/Cyan Akzent */
+  font-family: 'Lato', sans-serif;
+}
+
+.paket-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.paket-features li {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lato', sans-serif;
+}
+
+.check-icon {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+/* "So geht es weiter" Infobox */
+.paket-info-box {
+  background: rgba(56, 189, 248, 0.08);
+  border-left: 4px solid #38f83b;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+
+.paket-info-box p {
+  margin: 0;
+  font-size: 0.77rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-info-box strong {
+  color: #6bf838;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paket-action a {
+    display: inline-block;
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.paket-action a:hover {
+    background-color: #16a34a;
+}
+
+.paket-buchung {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paket-buchung h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.paket-buchung p {
+    font-size: 17px;
+}
+
+.einzelleistungen-section {
+    padding: 40px 0;
+}
+
+.einzelleistungen-titel {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.einzelleistungen-untertitel {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Grid Layout: 3 Pro Reihe */
+.einzelleistungen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.einzelleistung-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.einzelleistung-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.card-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.card-checklist li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.card-checklist .check-icon {
+    color: #22c55e;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+/* Button-Styling für Einzelleistungen */
+.btn-secondary {
+    display: block;
+    text-align: center;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+/* Responsive Anpassung für Tablet und Smartphone */
+@media (max-width: 900px) {
+    .einzelleistungen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .einzelleistungen-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.buchung-ueberblick {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 4px solid #22c55e;
+    color: #166534;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.index-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Gemeinsame Basis-Stile für beide Buttons */
+.index-button-prm,
+.index-button-sec {
+    flex: 1;                  /* Beide Buttons teilen sich den Platz 50/50 auf */
+    max-width: 280px;         /* Begrenzung, damit sie auf großen Bildschirmen nicht zu breit werden */
+    text-align: center;       /* Text genau mittig ausrichten */
+    box-sizing: border-box;   /* Rechnet Rahmendicke in die Gesamthöhe/-breite ein */
+    
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 27px;
+    font-family: Lato, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+/* Primärer Button (Ausgefüllt) */
+.index-button-prm {
+    color: white;
+    background-color: rgb(6, 131, 54);
+    border: 2px solid rgb(6, 131, 54); /* Gleicher Rahmen wie Sec-Button für exakt identische Höhe */
+}
+
+/* Sekundärer Button (Rahmen) */
+.index-button-sec {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #146129;
+}
+
+/* Hover-Effekte */
+.index-button-prm:hover,
+.index-button-sec:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 3. Responsiv-Anpassung (Mobile Geräte) --- */
+@media (max-width: 600px) {
+  .paket-content {
+    padding: 24px;
+  }
+
+  .paket-card {
+    padding: 18px;
+  }
+
+  .paket-title-row h3 {
+    font-size: 1.15rem;
+  }
+
+  .paket-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Steuerung */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        position: relative;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none; /* Standarmäßig eingeklappt */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        gap: 20px !important;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+
+    /* Klasse zum Einblenden via JavaScript */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Transformation des Icon zum 'X' */
+    .burger-menu.open span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .burger-menu.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+
+/* ==========================================================================
+   SUPER MOBILE RESPONSIVE DESIGN (Handys & Tablets)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. ALLGEMEINE ANPASSUNGEN */
+    
+
+    section {
+        padding: 40px 15px !important; /* Weniger Padding an den Seiten auf Handys */
+    }
+
+    h2 {
+        font-size: 32px !important; /* Standard-Größe für Sektions-Überschriften */
+        margin-top: 50px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* 2. HEADER & NAVIGATION */
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 45px; /* Logo etwas kleiner auf Handys */
+    }
+
+    nav ul {
+        margin-right: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px; /* Kleinere Nav-Links für bessere Lesbarkeit */
+    }
+
+    /* 3. HERO BEREICHE (Startseite & Unterseiten) */
+    .hero-index, .leistungen-hero, .übermich-hero, .kontakt-hero {
+        height: auto;
+        min-height: 60vh;
+        padding: 60px 20px;
+    }
+
+    .hero-index-content h2, .übermich-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-index-content p, .übermich-hero-content p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .hero-index-content a, .cta-button {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+
+    /* 4. CONTENT-SEKTIONEN (Aufsitz, Warum wir, Hinterstecken) */
+    .index-aufsitz, .container-warum, .hinterstecken, .leistung-detail, .leistung-detail.reverse {
+        flex-direction: column !important; /* Alles untereinander stapeln */
+        padding: 40px 20px !important;
+        gap: 30px !important;
+    }
+
+    .aufsitz-text h3, .hinterstecken-text h2 {
+        font-size: 28px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .aufsitz-text p, .hinterstecken-text p {
+        padding: 0;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .aufsitz-image, .container-warum-image, .hinterstecken-bild, .leistung-bild {
+        width: 100%;
+    }
+
+    .aufsitz-image img, .leistung-bild img {
+        height: 250px; /* Bilder auf Handys nicht zu hoch machen */
+    }
+
+    /* 5. LISTEN & CHECKMARKS */
+    .container-warum-text li, .leistung-liste li {
+        font-size: 17px;
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    /* 6. CARDS & GRIDS (Angebote, Versprechen, Zusatzleistungen) */
+    .angebote-container, .versprechen-container, .zusatz-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px;
+    }
+
+    .angebote-card, .versprechen-card, .zusatz-card {
+        margin-bottom: 0;
+        padding: 30px 20px;
+    }
+
+    .angebote-card h4, .versprechen-card h4 {
+        font-size: 24px;
+    }
+
+    /* 7. GALERIE & SLIDER */
+    .index-bilder-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    #bild1 img, #bild2 img {
+        height: 250px;
+    }
+
+    .slider-wrapper {
+        height: 350px; /* Slider flacher für Handys */
+    }
+
+    .slide {
+        width: 90%; /* Das Bild nimmt fast die volle Breite ein */
+    }
+
+    .slide.prev, .slide.next {
+        display: none; /* Verstecke die Seitenbilder auf kleinen Handys für mehr Fokus */
+    }
+
+    /* 8. VORHER / NACHHER */
+    .vn-bilder {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .vn-bild-container img {
+        height: 250px;
+    }
+
+    /* 9. KONTAKT & FORMULAR */
+    .kontakt-grid-container {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .info-card:hover {
+        transform: none; /* Hover-Effekt auf Touch-Geräten oft störend */
+    }
+
+    /* 10. MAP & RADIUS */
+    .map-placeholder img {
+        height: 300px;
+    }
+
+    .radius-circle {
+        width: 150px; /* Kleinerer Radius-Kreis auf kleinen Bildschirmen */
+        height: 150px;
+    }
+
+    /* 11. FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .footer-column a:hover {
+        padding-left: 0; /* Effekt auf Handy deaktivieren */
+    }
+}
+
+/* Spezielle Anpassung für extrem kleine Handys (z.B. iPhone SE) */
+@media (max-width: 380px) {
+    .hero-index-content h2 {
+        font-size: 28px;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+}

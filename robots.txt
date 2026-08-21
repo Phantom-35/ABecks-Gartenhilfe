@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Link zur XML-Sitemap
+Sitemap: https://abecks-gartenhilfe.netlify.app/sitemap.xml
