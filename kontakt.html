@@ -38,7 +38,7 @@
   <main>
     <section class="kontakt-hero">
       <div class="kontakt-content">
-        <h1>Lassen sie uns Ihren <span>Garten</span> planen</h1>
+        <h1>Lassen Sie uns Ihren <span>Garten</span> planen</h1>
         <p>
           Egal ob Einmal-Einsatz oder regelmäßige Pflege – ich melde mich
           zeitnah bei Ihnen zurück.
@@ -74,7 +74,7 @@
             <span>alexander-beckhaus@outlook.com</span>
           </a>
 
-          <a href="https://www.instagram.com/abecks_garten" target="_blank" class="info-card">
+          <a href="https://www.instagram.com/abecks_garten" target="_blank" rel="noopener noreferrer" class="info-card">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -185,7 +185,7 @@
                 <span class="custom-checkbox"></span>
                 <span class="checkbox-text">
                   Ich habe die
-                  <a href="rechtliches.html" target="_blank">Datenschutzerklärung</a>
+                  <a href="rechtliches.html#datenschutz" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
                   gelesen und stimme der Verarbeitung meiner Daten zur
                   Bearbeitung meiner Anfrage zu.
                   <span class="required-asterisk">*</span>
@@ -356,49 +356,6 @@
     </footer>
   </main>
 
-  <script src="script.js"></script>
-  <script>
-    const form = document.getElementById("kontakt-form");
-    const successMessage = document.getElementById("success-message");
-
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault(); // Verhindert das Neuladen der Seite
-
-      const data = new FormData(event.target);
-
-      // Button-Text ändern, damit der User sieht, dass etwas passiert
-      const button = form.querySelector(".submit-btn");
-      const originalText = button.innerText;
-      button.innerText = "Wird gesendet...";
-      button.disabled = true;
-
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      })
-        .then((response) => {
-          if (response.ok) {
-            // Formular ausblenden, Erfolg zeigen
-            form.style.display = "none";
-            successMessage.style.display = "block";
-          } else {
-            alert(
-              "Hoppla! Da gab es ein Problem. Bitte versuchen Sie es erneut.",
-            );
-            button.innerText = originalText;
-            button.disabled = false;
-          }
-        })
-        .catch((error) => {
-          alert("Netzwerkfehler. Bitte prüfen Sie Ihre Verbindung.");
-          button.innerText = originalText;
-          button.disabled = false;
-        });
-    });
-  </script>
   <script src="script.js"></script>
 </body>
 
