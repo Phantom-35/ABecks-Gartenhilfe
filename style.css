@@ -97,8 +97,8 @@
     --textfarbe: #3c413c;
     --unterüberschriften: #1a5c2b;
     --buttons: #16c54a;
-    --cardgrey: #f8fff8;
-    --surface: #f4f8f4;
+    --cardgrey: #ffffff;
+    --surface: #ffffff;
 }
 
 body {
@@ -242,7 +242,7 @@ nav a:hover {
     align-items: center;
     gap: 50px; /* Mehr Platz zwischen Text und Bild */
     padding: 80px 4%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
-    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    background-color: #ffffff;
 }
 
 .aufsitz-text {
@@ -385,7 +385,7 @@ nav a:hover {
     align-items: center;
     gap: 80px; /* Mehr Platz zwischen Text und Bild */
     padding: 80px 10%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
-    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    background-color: #ffffff;
     margin-bottom: 150px;
 }
 
@@ -455,7 +455,7 @@ nav a:hover {
     align-items: center;
     gap: 80px; /* Mehr Platz zwischen Text und Bild */
     padding: 80px;
-    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    background-color: #ffffff;
     margin-bottom: 60px;
 }
 
@@ -554,7 +554,7 @@ nav a:hover {
 .leistungen-hero {
     text-align: center;
     padding: 80px 20px;
-    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    background-color: #ffffff;
     margin-bottom: 60px;
     height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
@@ -652,7 +652,7 @@ nav a:hover {
 /* --- ZUSATZLEISTUNGEN (Grid) --- */
 .zusatz-leistungen {
     padding: 60px 10%;
-    background-color: #f9faf9;
+    background-color: #ffffff;
     text-align: center;
     margin-bottom: 80px;
 }
@@ -751,7 +751,7 @@ nav a:hover {
 .uebermich-hero {
     text-align: center;
     padding: 80px 20px;
-    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    background-color: #ffffff;
     margin-bottom: 60px;
     height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
@@ -784,7 +784,7 @@ nav a:hover {
     align-items: center;
     gap: 50px; /* Mehr Platz zwischen Text und Bild */
     padding: 80px 3%; /* Großzügiger Abstand nach oben/unten und zu den Seiten */
-    background-color: #f9faf9; /* Ganz leichter Farbstich für mehr Tiefe */
+    background-color: #ffffff;
 }
 
 .hinterstecken-text {
@@ -1160,7 +1160,7 @@ nav a:hover {
 .kontakt-hero {
      text-align: center;
     padding: 80px 20px;
-    background-color: #f9faf9; /* Gleicher Farbton wie auf der Startseite */
+    background-color: #ffffff;
     margin-bottom: 60px;
     height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
@@ -1391,7 +1391,7 @@ input:focus, textarea:focus {
 
 /* --- MAP & RADIUS --- */
 .einsatzbereich {
-    background-color: #f9faf9;
+    background-color: #ffffff;
     padding: 80px 20px;
     text-align: center;
 }
@@ -2443,4 +2443,245 @@ input:focus, textarea:focus {
 .kontakt-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
                       url('Bilder/hecke.jpeg');
+}
+
+/* Finales Designsystem */
+:root {
+    --green-deep: #173d24;
+    --green-main: #247a3b;
+    --green-soft: #eaf4eb;
+    --surface: #ffffff;
+    --border: #dfe8df;
+    --shadow-soft: 0 8px 24px rgba(23, 61, 36, 0.08);
+}
+
+body {
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4,
+.hero-index-content h2,
+.hero-content h1,
+.uebermich-hero-content h1,
+.kontakt-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.15;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.header {
+    padding-inline: clamp(16px, 4vw, 48px);
+}
+
+.header nav ul {
+    margin-right: 0;
+}
+
+.hero-index-content h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.hero-index-content p {
+    font-size: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.vorstellung h2,
+.leistungs-teaser h2,
+.warum-abecks h2,
+.galerie h2,
+.versprechen h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.vorstellung,
+.leistungs-teaser,
+.warum-abecks,
+.galerie,
+.versprechen {
+    padding-inline: clamp(16px, 4vw, 48px);
+}
+
+.angebote-card,
+.versprechen-card,
+.zusatz-card,
+.bewertung-card,
+.vn-projekt,
+.info-card,
+.paket-box-wrapper {
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.angebote-card,
+.versprechen-card,
+.zusatz-card,
+.bewertung-card,
+.vn-projekt {
+    border-radius: 8px;
+}
+
+.angebote-card:hover,
+.versprechen-card:hover,
+.bewertung-card:hover,
+.einzelleistung-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(23, 61, 36, 0.12);
+}
+
+.angebote-card p,
+.versprechen-card p,
+.zusatz-card p {
+    line-height: 1.55;
+}
+
+.index-aufsitz,
+.container-warum,
+.index-bilder-container,
+.zusatz-leistungen,
+.einsatzbereich {
+    background-color: var(--surface);
+}
+
+.index-button-prm,
+.index-button-sec,
+.leistungs-teaser a,
+.galerie a,
+.cta-button,
+.submit-btn,
+.paket-action a,
+.nahbar-button {
+    border-radius: 8px;
+}
+
+.index-button-prm,
+.index-button-sec {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.kontakt-grid-container {
+    align-items: flex-start;
+}
+
+.kontakt-info,
+.kontakt-formular {
+    min-width: 0;
+}
+
+.kontakt-formular {
+    padding: clamp(20px, 3vw, 36px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.info-card {
+    border-radius: 8px;
+}
+
+.main-footer {
+    background: #1a1a1a;
+    margin-top: 72px;
+}
+
+.footer-logo {
+    color: var(--hauptfarbe);
+}
+
+.footer-column a:hover {
+    color: var(--unterüberschriften);
+}
+
+.google-text {
+    letter-spacing: 0;
+}
+
+.galerie-hero h2,
+.vorher-nachher h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.slider-wrapper {
+    height: clamp(360px, 42vw, 500px);
+}
+
+.vn-projekt {
+    padding: clamp(24px, 4vw, 40px);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 16px;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo h1 {
+        max-width: 190px;
+        line-height: 1.1;
+    }
+
+    .hero-index,
+    .leistungen-hero,
+    .uebermich-hero,
+    .kontakt-hero,
+    .galerie-page-hero {
+        min-height: 52vh;
+        height: auto;
+    }
+
+    .galerie-page-hero {
+        min-height: 58vh;
+    }
+
+    .kontakt-grid-container {
+        padding-inline: 16px;
+    }
+
+    .kontakt-formular {
+        padding: 20px 16px;
+    }
+
+    .index-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    .index-button-prm,
+    .index-button-sec {
+        max-width: none;
+    }
+
+    .slider-wrapper {
+        height: 360px;
+    }
+
+    .nahbar {
+        margin-inline: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-index-content h2 {
+        font-size: 2.25rem;
+    }
+
+    .uebermich-hero-content h1,
+    .kontakt-hero h1,
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .vn-projekt {
+        border-radius: 8px;
+    }
 }
