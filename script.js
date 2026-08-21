@@ -20,13 +20,13 @@
   }
 
   const data = {
-    allround: ['Deine Paket-Auswahl', 'Allround-Gartenpaket', 'Festpreis / Nach Besichtigung', ['Rasenmähen & Kanten pflegen', 'Hecken- & Strauchschnitt', 'Unkraut- & Beetpflege', 'Stein- & Gehwegreinigung', 'Fachgerechte Grünabfallentsorgung']],
-    heckenschnitt: ['Deine Leistungsauswahl', 'Heckenschnitt', 'Nach Aufwand / Besichtigung', ['Form- & Rückschnitt von Hecken & Sträuchern', 'Fachgerechte Schnittgutentsorgung']],
-    rasenmaehen: ['Deine Leistungsauswahl', 'Rasenmähen', 'Nach Fläche / Absprache', ['Präzises Mähen & Kanten trimmen', 'Saubere Grasschnittentsorgung']],
-    beetpflege: ['Deine Leistungsauswahl', 'Beetpflege', 'Nach Aufwand', ['Gründliche Unkrautentfernung', 'Boden auflockern & säubern']],
-    pflasterreinigung: ['Deine Leistungsauswahl', 'Pflasterreinigung', 'Nach Quadratmeter', ['Effektive Hochdruckreinigung', 'Fugenreinigung & Nachsanden']],
-    baumpflege: ['Deine Leistungsauswahl', 'Baumpflege', 'Nach Besichtigung', ['Totholzbeseitigung', 'Fachgerechter Lichtungsschnitt']],
-    laubbeseitigung: ['Deine Leistungsauswahl', 'Laubbeseitigung', 'Nach Aufwand', ['Rasen- & Beetflächen säubern', 'Abtransport & Entsorgung']]
+    allround: ['Ihre Paketauswahl', 'Allround-Gartenpaket', 'Festpreis / Nach Besichtigung', ['Rasenmähen & Kanten pflegen', 'Hecken- & Strauchschnitt', 'Unkraut- & Beetpflege', 'Stein- & Gehwegreinigung', 'Fachgerechte Grünabfallentsorgung']],
+    heckenschnitt: ['Ihre Leistungsauswahl', 'Heckenschnitt', 'Nach Aufwand / Besichtigung', ['Form- & Rückschnitt von Hecken & Sträuchern', 'Fachgerechte Schnittgutentsorgung']],
+    rasenmaehen: ['Ihre Leistungsauswahl', 'Rasenmähen', 'Nach Fläche / Absprache', ['Präzises Mähen & Kanten trimmen', 'Saubere Grasschnittentsorgung']],
+    beetpflege: ['Ihre Leistungsauswahl', 'Beetpflege', 'Nach Aufwand', ['Gründliche Unkrautentfernung', 'Boden auflockern & säubern']],
+    pflasterreinigung: ['Ihre Leistungsauswahl', 'Pflasterreinigung', 'Nach Quadratmeter', ['Effektive Hochdruckreinigung', 'Fugenreinigung & Nachsanden']],
+    baumpflege: ['Ihre Leistungsauswahl', 'Baumpflege', 'Nach Besichtigung', ['Totholzbeseitigung', 'Fachgerechter Lichtungsschnitt']],
+    laubbeseitigung: ['Ihre Leistungsauswahl', 'Laubbeseitigung', 'Nach Aufwand', ['Rasen- & Beetflächen säubern', 'Abtransport & Entsorgung']]
   };
   const params = new URLSearchParams(location.search);
   const selected = data[params.get('paket') || params.get('leistung')];

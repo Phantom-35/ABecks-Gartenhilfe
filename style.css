@@ -93,11 +93,12 @@
 
 
 :root {
-    --hauptfarbe: rgb(20, 97, 41);
-    --textfarbe: rgb(60, 65, 60);
-    --unterüberschriften: rgb(26, 92, 43);
-    --buttons: rgb(22, 197, 74);
+    --hauptfarbe: #146129;
+    --textfarbe: #3c413c;
+    --unterüberschriften: #1a5c2b;
+    --buttons: #16c54a;
     --cardgrey: #f8fff8;
+    --surface: #f4f8f4;
 }
 
 body {
@@ -133,7 +134,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 24px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px); /* Erzeugt einen edlen Milchglas-Effekt */
     
@@ -142,27 +143,27 @@ img {
     top: 0;
     z-index: 1000; /* Damit er immer im Vordergrund bleibt */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #167c1b; 
+    border-bottom: 2px solid var(--hauptfarbe);
     position: sticky;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     color: var(--hauptfarbe);
     font-family: 'Montserrat', sans-serif;
 
 }
 
 .logo img {
-    height: 60px;
+    height: 52px;
     width: auto;
 }
 
 nav ul {
     display: flex;
-    gap:40px;
+    gap: 28px;
     list-style: none;
     margin-right: 50px;
     padding: 0;
@@ -170,8 +171,9 @@ nav ul {
 
 nav a {
     font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    font-size: 24px;
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    font-weight: 700;
     color: rgb(0, 0, 0);
     transition: all 0.3s ease;
     text-decoration: none;
@@ -312,7 +314,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    padding: 40px;
+    padding: 32px 26px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -334,7 +336,7 @@ nav a:hover {
 
 .angebote-card h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 23px;
     margin: 0 auto 10px auto;
     transition: all 0.3s ease;
 }
@@ -556,7 +558,7 @@ nav a:hover {
     margin-bottom: 60px;
     height: 50vh; /* Oder 100vh für den ganzen Bildschirm */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                      url('Bilder/hero-index.jpg');
+                      url('Bilder/grasfläche.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -820,7 +822,7 @@ nav a:hover {
 
 .versprechen {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 120px;
 }
 
 .versprechen h2 {
@@ -889,25 +891,79 @@ nav a:hover {
 }
 
 .nahbar h2 {
-    font-family: Montserrat;
-    text-align: center;
-    font-size: 45px;
-    margin: 90px auto 50px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin: 0 0 24px;
 }
 
 .nahbar {
-    margin-top: 130px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 56px;
+    background: #173d24;
+    color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
 .nahbar span {
-    color: var(--unterüberschriften);
+    color: #8ee59b;
+}
+
+.nahbar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nahbar-eyebrow {
+    margin: 0 0 16px;
+    color: #b7d9bd;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.nahbar-text {
+    max-width: 30rem;
+    margin: 0 0 30px;
+    color: #e1eee3;
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+.nahbar-button {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 2px solid #8ee59b;
+    border-radius: 8px;
+    color: #173d24;
+    background: #8ee59b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nahbar-button:hover {
+    color: #ffffff;
+    background: transparent;
+    transform: translateY(-2px);
 }
 
 .nahbar-image {
     width: 100%;
-    height: 500px;
+    min-height: 360px;
     overflow: hidden;
-    margin: 50px auto 0 auto;
+    border-radius: 12px;
 }
 
 .nahbar-image img {
@@ -915,19 +971,13 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: grayscale(20%);
-    transition: filter 0.5s ease;
-}
-
-.nahbar-image:hover {
-    filter: grayscale(0%);
 }
 
 /* --- SLIDER BEREICH --- */
 .galerie-hero {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9faf9;
+    background-color: var(--surface);
 }
 
 .galerie-hero h2, .vorher-nachher h2 {
@@ -2190,13 +2240,17 @@ input:focus, textarea:focus {
 
     /* 2. HEADER & NAVIGATION */
     .header {
-        flex-direction: column;
+        flex-direction: row !important;
         padding: 15px;
-        gap: 15px;
+        gap: 0;
     }
 
     .logo img {
         height: 45px; /* Logo etwas kleiner auf Handys */
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
     }
 
     nav ul {
@@ -2354,6 +2408,18 @@ input:focus, textarea:focus {
     .footer-column a:hover {
         padding-left: 0; /* Effekt auf Handy deaktivieren */
     }
+
+    .nahbar {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 60px;
+        padding: 32px 24px;
+        border-radius: 0;
+    }
+
+    .nahbar-image {
+        min-height: 240px;
+    }
 }
 
 /* Spezielle Anpassung für extrem kleine Handys (z.B. iPhone SE) */
@@ -2365,4 +2431,16 @@ input:focus, textarea:focus {
     nav a {
         font-size: 14px;
     }
+}
+
+.galerie-page-hero {
+    height: 58vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+                      url('Bilder/hero-galerie.webp');
+    background-position: center;
+}
+
+.kontakt-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+                      url('Bilder/hecke.jpeg');
 }
