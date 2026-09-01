@@ -460,11 +460,17 @@ nav a:hover {
 }
 
 #bild1 {
+    position: relative;
     flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 #bild2 {
+    position: relative;
     flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 #bild1 img, #bild2 img {
@@ -477,6 +483,11 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     display: block;
+}
+
+#bild1 .ai-note, #bild2 .ai-note {
+    bottom: 12px;
+    right: 12px;
 }
 
 .galerie a {
@@ -1120,6 +1131,8 @@ nav a:hover {
 .vn-bild-container {
     position: relative;
     flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .vn-bild-container img {
@@ -1130,11 +1143,34 @@ nav a:hover {
     display: block;
 }
 
+.ai-note {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 3;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(17, 24, 39, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+
 /* Die kleinen Schilder auf den Bildern */
 .badge {
     position: absolute;
     bottom: 20px;
     left: 20px;
+    z-index: 2;
     padding: 8px 20px;
     border-radius: 30px;
     font-family: 'Montserrat', sans-serif;
