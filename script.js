@@ -26,7 +26,11 @@
     beetpflege: ['Ihre Leistungsauswahl', 'Beetpflege', 'Nach Aufwand', ['Gründliche Unkrautentfernung', 'Boden auflockern & säubern']],
     pflasterreinigung: ['Ihre Leistungsauswahl', 'Pflasterreinigung', 'Nach Quadratmeter', ['Effektive Hochdruckreinigung', 'Fugenreinigung & Nachsanden']],
     baumpflege: ['Ihre Leistungsauswahl', 'Baumpflege', 'Nach Besichtigung', ['Totholzbeseitigung', 'Fachgerechter Lichtungsschnitt']],
-    laubbeseitigung: ['Ihre Leistungsauswahl', 'Laubbeseitigung', 'Nach Aufwand', ['Rasen- & Beetflächen säubern', 'Abtransport & Entsorgung']]
+    laubbeseitigung: ['Ihre Leistungsauswahl', 'Laubbeseitigung', 'Nach Aufwand', ['Rasen- & Beetflächen säubern', 'Abtransport & Entsorgung']],
+    winterdienst: ['Ihre Paketauswahl', 'Winterdienst-Komplettpaket', 'Nach Fläche und Einsatzhäufigkeit', ['Regelmäßiges Schneeschippen', 'Streuen bei Glätte und Frost', 'Betreuung von Gehwegen, Einfahrten und Zugängen', 'Individuelle Betreuung während der Wintermonate']],
+    'schnee-schippen': ['Ihre Leistungsauswahl', 'Schnee schippen', 'Nach Fläche und Aufwand', ['Gehwege und Einfahrten freiräumen', 'Schneeräumung nach Bedarf']],
+    'salz-streuen': ['Ihre Leistungsauswahl', 'Salz streuen', 'Nach Fläche und Aufwand', ['Streuen bei Glätte und Frost', 'Gehwege, Zugänge und Einfahrten sichern']],
+    'weihnachtsbaum-liefern': ['Ihre Leistungsauswahl', 'Weihnachtsbaum liefern', 'Nach Größe, Sorte und Liefergebiet', ['Bequeme Lieferung bis zu Ihnen nach Hause', 'Größe und Sorte individuell abstimmen', 'Liefertermin nach Absprache']]
   };
   const params = new URLSearchParams(location.search);
   const selected = data[params.get('paket')] || data[params.get('leistung')];
