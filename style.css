@@ -4292,3 +4292,531 @@ h1, h2, h3, h4,
         padding: 44px 20px 64px;
     }
 }
+
+/* Final mobile layout overrides. Desktop rules remain unchanged above 768px. */
+@media (max-width: 768px) {
+    html {
+        overflow-x: clip;
+    }
+
+    body,
+    main,
+    section,
+    header,
+    footer,
+    .container,
+    .container-warum,
+    .kontakt-grid-container,
+    .paket-box-wrapper {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    img,
+    svg,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    p,
+    li,
+    a,
+    button,
+    label,
+    input,
+    textarea,
+    select {
+        overflow-wrap: anywhere;
+    }
+
+    .header {
+        min-height: 64px;
+        padding: 10px 16px;
+        gap: 10px;
+    }
+
+    .logo {
+        flex: 1 1 auto;
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-name {
+        display: block;
+        min-width: 0;
+        max-width: 100%;
+        color: inherit;
+        font-size: clamp(0.9rem, 4vw, 1.05rem);
+        line-height: 1.15;
+        overflow-wrap: normal;
+        text-wrap: balance;
+    }
+
+    .burger-menu {
+        flex: 0 0 44px;
+    }
+
+    .header nav ul {
+        max-height: calc(100svh - 64px);
+        overflow-y: auto;
+    }
+
+    .hero-index,
+    .leistungen-hero,
+    .uebermich-hero,
+    .kontakt-hero,
+    .galerie-page-hero {
+        min-height: auto;
+        padding: clamp(72px, 14vh, 116px) 20px clamp(68px, 12vh, 100px) !important;
+    }
+
+    .hero-index-content,
+    .hero-content,
+    .uebermich-hero-content,
+    .kontakt-content {
+        max-width: 34rem;
+        margin-inline: auto;
+    }
+
+    .hero-index-content h1,
+    .hero-index-content h2,
+    .hero-content h1,
+    .uebermich-hero-content h1,
+    .kontakt-hero h1,
+    .galerie-page-hero h1 {
+        max-width: 16ch;
+        margin-inline: 0;
+        font-size: clamp(2.25rem, 10.5vw, 3.6rem) !important;
+        line-height: 1.02;
+        text-wrap: balance;
+    }
+
+    .hero-index-content .hero-lead,
+    .hero-index-content p,
+    .hero-content p,
+    .uebermich-hero-content p,
+    .kontakt-hero p {
+        max-width: 31rem;
+        margin: 18px 0 0;
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+
+    .index-buttons {
+        width: 100%;
+        max-width: 22rem;
+        margin: 28px 0 0;
+        gap: 10px;
+    }
+
+    .index-button-prm,
+    .index-button-sec,
+    .leistungs-teaser > a,
+    .galerie > a,
+    .cta-button,
+    .submit-btn,
+    .paket-action a,
+    .nahbar-button,
+    .trust-link {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        min-height: 48px;
+        padding: 13px 16px;
+        font-size: 0.95rem;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    .index-button-prm,
+    .index-button-sec {
+        flex: 0 0 auto;
+        height: auto;
+    }
+
+    .intro-section,
+    .services-section,
+    .trust-section,
+    .results-section,
+    .review-section,
+    .vorstellung,
+    .leistungs-teaser,
+    .warum-abecks,
+    .galerie,
+    .versprechen,
+    .index-aufsitz,
+    .leistung-detail,
+    .leistung-detail.reverse,
+    .zusatz-leistungen,
+    .paket-buchung,
+    .kontakt-grid-container {
+        padding-inline: 20px !important;
+    }
+
+    .intro-section,
+    .services-section,
+    .trust-section,
+    .results-section,
+    .review-section,
+    .vorstellung,
+    .leistungs-teaser,
+    .warum-abecks,
+    .galerie,
+    .versprechen,
+    .zusatz-leistungen,
+    .paket-buchung,
+    .kontakt-grid-container {
+        padding-block: 64px !important;
+    }
+
+    .section-kicker {
+        max-width: 30rem;
+        margin-bottom: 12px;
+        font-size: 0.7rem;
+        line-height: 1.45;
+        text-wrap: balance;
+    }
+
+    .intro-section h2,
+    .services-section h2,
+    .trust-section h2,
+    .results-section h2,
+    .vorstellung h2,
+    .leistungs-teaser h2,
+    .warum-abecks h2,
+    .galerie h2,
+    .versprechen h2,
+    .galerie-hero h2,
+    .vorher-nachher h2,
+    .paket-buchung h2,
+    .zusatz-leistungen h2 {
+        max-width: 20ch;
+        margin: 0 auto 18px !important;
+        font-size: clamp(1.8rem, 8vw, 2.55rem) !important;
+        line-height: 1.08;
+        text-wrap: balance;
+    }
+
+    .intro-section > p:not(.section-kicker),
+    .results-section > p:not(.section-kicker),
+    .services-section > p:not(.section-kicker),
+    .trust-section > p:not(.section-kicker),
+    .galerie-intro,
+    .vn-intro {
+        max-width: 36rem;
+        margin-inline: auto;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .index-aufsitz,
+    .container-warum,
+    .leistung-detail,
+    .leistung-detail.reverse,
+    .hinterstecken {
+        gap: 28px !important;
+    }
+
+    .index-aufsitz,
+    .leistung-detail,
+    .leistung-detail.reverse,
+    .hinterstecken {
+        padding-block: 64px !important;
+    }
+
+    .aufsitz-text,
+    .leistung-text,
+    .hinterstecken-text,
+    .container-warum-text {
+        text-align: left;
+    }
+
+    .aufsitz-text h3,
+    .hinterstecken-text h2,
+    .leistung-text h2,
+    .container-warum-text h2 {
+        max-width: 20ch;
+        margin: 0 0 16px;
+        font-size: clamp(1.65rem, 7vw, 2.25rem);
+        line-height: 1.1;
+        text-wrap: balance;
+    }
+
+    .aufsitz-text p,
+    .hinterstecken-text p,
+    .leistung-text p,
+    .container-warum-text p,
+    .trust-lead {
+        max-width: 38rem;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .winterdienst-link,
+    .trust-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 22rem;
+    }
+
+    .angebote-container,
+    .versprechen-container,
+    .zusatz-grid,
+    .services-section .angebote-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px !important;
+        width: 100%;
+    }
+
+    .angebote-card,
+    .versprechen-card,
+    .zusatz-card,
+    .bewertung-card {
+        min-width: 0;
+        min-height: 0;
+        padding: 22px 20px;
+        text-align: left;
+    }
+
+    .angebote-card svg,
+    .versprechen-card svg,
+    .zusatz-card svg {
+        margin-bottom: 16px;
+    }
+
+    .angebote-card h4,
+    .versprechen-card h4,
+    .zusatz-card h4 {
+        min-height: 0;
+        margin-bottom: 8px;
+        font-size: 1.08rem;
+        line-height: 1.3;
+    }
+
+    .angebote-card p,
+    .versprechen-card p,
+    .zusatz-card p,
+    .leistung-liste li,
+    .container-warum-text li {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+
+    .leistung-liste,
+    .container-warum-text ul {
+        padding-left: 0;
+    }
+
+    .container-warum-text li,
+    .leistung-liste li {
+        margin-bottom: 12px;
+        padding-left: 28px;
+    }
+
+    .aufsitz-image img,
+    .leistung-bild img,
+    .container-warum-image img,
+    .hinterstecken-bild img {
+        width: 100%;
+        height: 240px;
+        min-height: 0;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .index-bilder-container,
+    .vn-bilder,
+    .results-section .index-bilder-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+    }
+
+    #bild1 img,
+    #bild2 img {
+        height: 220px;
+    }
+
+    .slider-wrapper {
+        height: min(78vw, 360px);
+        min-height: 240px;
+    }
+
+    .vn-projekt {
+        margin-inline: 0;
+        padding: 22px 18px;
+        text-align: left;
+    }
+
+    .vn-text,
+    .nahbar-content {
+        min-width: 0;
+        text-align: left;
+    }
+
+    .vn-text h3,
+    .nahbar-content h2 {
+        max-width: 20ch;
+        font-size: clamp(1.45rem, 6.5vw, 1.9rem);
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+    .vn-text p,
+    .nahbar-text {
+        max-width: 38rem;
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .nahbar {
+        margin-inline: 0;
+        padding: 28px 20px;
+    }
+
+    .nahbar-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 22rem;
+    }
+
+    .legal-page {
+        width: 100%;
+        padding: 48px 20px;
+    }
+
+    .legal-container,
+    .legal-section,
+    .legal-block {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .legal-nav {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px 16px;
+    }
+
+    .legal-section h2,
+    .legal-block h3 {
+        max-width: 22ch;
+        font-size: clamp(1.45rem, 6.5vw, 2rem);
+        line-height: 1.15;
+        text-wrap: balance;
+    }
+
+    .legal-section p,
+    .legal-block p,
+    .legal-block li {
+        font-size: 0.96rem;
+        line-height: 1.65;
+        text-align: left;
+    }
+
+    .paket-box-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .paket-content,
+    .paket-image,
+    .paket-action,
+    .paket-checkliste,
+    .paket-intro {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .paket-content {
+        padding: 24px 20px;
+    }
+
+    .paket-content h2,
+    .einzelleistungen-titel {
+        max-width: 18ch;
+        font-size: clamp(1.55rem, 7vw, 2rem) !important;
+        text-align: left;
+    }
+
+    .paket-checkliste li,
+    .paket-features li {
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.5;
+    }
+
+    .kontakt-grid-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .kontakt-info,
+    .kontakt-formular {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .kontakt-info h2,
+    .kontakt-formular h2 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+        line-height: 1.1;
+    }
+
+    .info-card {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .info-card span,
+    .checkbox-text,
+    .paket-info-box p {
+        min-width: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .kontakt-formular {
+        padding: 20px 16px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    input,
+    textarea,
+    select {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .main-footer {
+        margin-top: 0;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding-inline: 20px;
+        text-align: left;
+    }
+}
