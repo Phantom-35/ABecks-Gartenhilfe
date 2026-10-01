@@ -98,7 +98,6 @@
     --unterüberschriften: #1a5c2b;
     --buttons: #146129;
     --cardgrey: #ffffff;
-    --surface: #ffffff;
 }
 
 body {
@@ -200,12 +199,6 @@ nav a:hover {
 .hero-index-content {
     color: white;
     text-align: center;
-}
-
-.hero-index-content h2 {
-    font-size: 60px;
-    font-family: Montserrat;
-    margin: 0 auto 0 auto;
 }
 
 .hero-index-content p {
@@ -329,21 +322,12 @@ nav a:hover {
 .angebote-card {
     flex: 1 1 250px;           /* NEU: Flex-Grow (verteilen), Flex-Shrink (verkleinern) und Basis-Breite von 250px */
     max-width: 320px;          /* NEU: Verhindert, dass eine Karte riesig wird, wenn sie in eine neue Reihe springt */
-    background-color: var(--cardgrey);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
     padding: 32px 26px;
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center;
     margin-bottom: 60px;       /* Auf 30px angepasst, damit der Abstand nach unten exakt dem 'gap' entspricht, wenn sie umbrechen */
-}
-
-.angebote-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .angebote-card svg {
@@ -513,16 +497,6 @@ nav a:hover {
     display: block;
 }
 
-#bild1 .ai-note {
-    bottom: 12px;
-    right: 12px;
-}
-
-#bild2 .ai-note {
-    bottom: 12px;
-    right: 12px;
-}
-
 .galerie a {
     display: inline-block;
     color: white;
@@ -583,7 +557,6 @@ nav a:hover {
 
 .google-text {
     font-weight: 700;
-    letter-spacing: -0.5px;
     font-family: 'Google Sans', 'Product Sans', 'Roboto', Arial, sans-serif;
 }
 
@@ -894,8 +867,6 @@ nav a:hover {
 
 .versprechen-card {
     background-color: var(--cardgrey);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     padding: 40px;
     display: flex;
@@ -905,10 +876,6 @@ nav a:hover {
     margin-bottom: 60px;
     flex: 1;
     min-width: 0;
-}
-
-.versprechen-card:hover {
-    transform: translateY(-5px);
 }
 
 .versprechen-card svg {
@@ -1271,12 +1238,6 @@ nav a:hover {
 }
 
 /* --- INFO CARDS (Links) --- */
-.kontakt-info h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
 .info-links {
     display: flex;
     flex-direction: column;
@@ -1362,13 +1323,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
     background: #fff1f1;
     border: 1px solid #d46a6a;
     border-radius: 8px;
-}
-
-.slider-status {
-    margin: 16px auto 0;
-    max-width: 40rem;
-    text-align: center;
-    color: var(--textfarbe);
 }
 
 .submit-btn {
@@ -1529,29 +1483,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 }
 
 /* Der Radius-Kreis Effekt */
-.radius-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
-    background: rgba(76, 175, 80, 0.2);
-    border: 3px solid rgba(76, 175, 80, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.location-pin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    font-size: 30px;
-}
-
-
-
 /* Responsiv */
 @media (max-width: 850px) {
     .kontakt-grid-container {
@@ -1604,12 +1535,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
     margin: 60px 0;
 }
 
-.legal-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
 .legal-section h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -1634,7 +1559,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
     color: #ffffff;
     padding: 60px 20px 20px 20px;
     font-family: 'Lato', sans-serif;
-    margin-top: 100px; /* Abstand zu den Rezept-Karten */
 }
 
 .footer-container {
@@ -1762,11 +1686,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bewertung-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .stars {
@@ -2346,53 +2265,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
     min-height: 250px;
 }
 
-.saison-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 292px;
-    overflow: hidden;
-    border: 1px solid #d7e7dc;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: var(--shadow-soft);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.saison-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(23, 61, 36, 0.14);
-}
-
-.saison-card-icon {
-    display: grid;
-    min-height: 74px;
-    place-items: center;
-    color: #247a3b;
-    background: #eaf4eb;
-    font-size: 2rem;
-}
-
-.saison-card-content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.saison-card-content h4 {
-    margin: 0 0 12px;
-    color: #173d24;
-    font-size: 1.25rem;
-}
-
-.saison-card .card-checklist {
-    margin-bottom: 20px;
-}
-
-.saison-card .btn-secondary {
-    margin-top: auto;
-}
-
 .index-buttons {
     display: flex;
     justify-content: center;
@@ -2556,10 +2428,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         height: 45px; /* Logo etwas kleiner auf Handys */
     }
 
-    .logo h1 {
-        font-size: 1.1rem;
-    }
-
     nav ul {
         margin-right: 0;
         gap: 15px;
@@ -2578,7 +2446,7 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         padding: 60px 20px;
     }
 
-    .hero-index-content h2, .uebermich-hero-content h1 {
+    .uebermich-hero-content h1 {
         font-size: 36px;
     }
 
@@ -2704,11 +2572,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         height: 300px;
     }
 
-    .radius-circle {
-        width: 150px; /* Kleinerer Radius-Kreis auf kleinen Bildschirmen */
-        height: 150px;
-    }
-
     /* 11. FOOTER */
     .footer-container {
         flex-direction: column;
@@ -2739,10 +2602,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 
 /* Spezielle Anpassung für extrem kleine Handys (z.B. iPhone SE) */
 @media (max-width: 380px) {
-    .hero-index-content h2 {
-        font-size: 28px;
-    }
-    
     nav a {
         font-size: 14px;
     }
@@ -2797,12 +2656,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         height: 42px;
         object-fit: cover;
         flex-shrink: 0;
-    }
-
-    .logo h1 {
-        min-width: 0;
-        font-size: 1rem;
-        line-height: 1.1;
     }
 
     .burger-menu {
@@ -2873,7 +2726,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         width: 100%;
     }
 
-    .hero-index-content h2,
     .uebermich-hero-content h1,
     .kontakt-hero h1 {
         font-size: clamp(2.15rem, 10vw, 3rem);
@@ -3142,10 +2994,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         padding: 48px 16px 0;
     }
 
-    .kontakt-info h3 {
-        font-size: 1.55rem;
-    }
-
     .info-links {
         gap: 12px;
         margin-top: 22px;
@@ -3194,11 +3042,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 
     .map-placeholder img {
         height: 260px;
-    }
-
-    .radius-circle {
-        width: 145px;
-        height: 145px;
     }
 
     .legal-page {
@@ -3256,10 +3099,6 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 }
 
 @media (max-width: 380px) {
-    .logo h1 {
-        font-size: 0.9rem;
-    }
-
     .hero-index,
     .leistungen-hero,
     .uebermich-hero,
@@ -3491,17 +3330,12 @@ button:focus-visible, a:focus-visible, select:focus-visible {
         margin-top: 40px;
     }
 
-    .saison-card {
-        min-height: 0;
-    }
 }
 
 /* Finales Designsystem */
 :root {
-    --green-deep: #173d24;
     --green-main: #247a3b;
     --green-soft: #eaf4eb;
-    --surface: #ffffff;
     --border: #dfe8df;
     --shadow-soft: 0 8px 24px rgba(23, 61, 36, 0.08);
 }
@@ -3512,17 +3346,11 @@ body {
 }
 
 h1, h2, h3, h4,
-.hero-index-content h2,
 .hero-content h1,
 .uebermich-hero-content h1,
 .kontakt-hero h1 {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.15;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: clamp(1rem, 1.8vw, 1.35rem);
 }
 
 .header {
@@ -3531,10 +3359,6 @@ h1, h2, h3, h4,
 
 .header nav ul {
     margin-right: 0;
-}
-
-.hero-index-content h2 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
 }
 
 .hero-index-content h1 {
@@ -3684,11 +3508,6 @@ h1, h2, h3, h4,
 
     .logo {
         min-width: 0;
-    }
-
-    .logo h1 {
-        max-width: 190px;
-        line-height: 1.1;
     }
 
     .hero-index,
@@ -4389,7 +4208,6 @@ h1, h2, h3, h4,
     }
 
     .hero-index-content h1,
-    .hero-index-content h2,
     .hero-content h1,
     .uebermich-hero-content h1,
     .kontakt-hero h1,

@@ -95,14 +95,12 @@
   const nextBtn = document.querySelector('.next-btn');
   if (slides.length > 1 && prevBtn && nextBtn) {
     let currentIndex = Math.max(0, slides.findIndex(slide => slide.classList.contains('active')));
-    const status = document.querySelector('.slider-status');
     const updateSlider = () => {
       slides.forEach(slide => slide.classList.remove('active', 'prev', 'next'));
       slides[currentIndex].classList.add('active');
       slides[(currentIndex - 1 + slides.length) % slides.length].classList.add('prev');
       slides[(currentIndex + 1) % slides.length].classList.add('next');
       slides.forEach((slide, index) => slide.setAttribute('aria-hidden', String(index !== currentIndex)));
-      if (status) status.textContent = `Bild ${currentIndex + 1} von ${slides.length}: ${slides[currentIndex].alt}`;
     };
     prevBtn.type = 'button'; nextBtn.type = 'button';
     prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + slides.length) % slides.length; updateSlider(); });
