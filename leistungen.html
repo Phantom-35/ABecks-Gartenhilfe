@@ -8,6 +8,7 @@
         content="Alle Gartenleistungen auf einen Blick: Rasenpflege, Heckenschnitt, Beetpflege & Unkrautentfernung in Meckenheim & Umgebung von ABecks Gartenarbeit.">
     <title>ABecks Gartenarbeit | Leistungen</title>
     <link rel="canonical" href="https://abecks-gartenhilfe.netlify.app/leistungen.html">
+    <meta name="theme-color" content="#1f4d36">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="ABecks Gartenarbeit">
@@ -19,422 +20,521 @@
     <meta name="twitter:title" content="Gartenleistungen in Meckenheim | ABecks Gartenarbeit">
     <meta name="twitter:description" content="Professionelle Gartenpflege in Meckenheim und Umgebung.">
     <meta name="twitter:image" content="https://abecks-gartenhilfe.netlify.app/Bilder/grasfläche.jpeg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="Bilder/web/grasflaeche.webp" as="image">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="Bilder/logo.ico" type="image/x-icon">
-
-
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="Bilder/logo.jpeg" alt="Logo">
-            <span class="logo-name">ABecks Gartenarbeit</span>
-        </div>
+    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-        <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav id="main-navigation" aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="leistungen.html" aria-current="page">Leistungen</a></li>
-                <li><a href="uebermich.html">Über mich</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html" class="brand" aria-label="ABecks Gartenarbeit – Startseite">
+                <img src="Bilder/logo.webp" alt="ABecks Gartenarbeit" width="360" height="250">
+            </a>
+
+            <nav id="main-navigation" class="site-nav" aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leistungen.html" aria-current="page">Leistungen</a></li>
+                    <li><a href="leistungen.html#paket-buchung" class="site-nav__booking">Buchung</a></li>
+                    <li><a href="uebermich.html">Über mich</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li class="site-nav__cta"><a href="tel:+4917663000681" class="btn btn--primary btn--sm">0176 63000681</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:+4917663000681" class="header-phone">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                <span>0176 63000681</span>
+            </a>
+
+            <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section class="leistungen-hero">
-            <div class="hero-content">
-                <h1>Meine Leistungen für Ihr grünes Paradies</h1>
-                <p>Von der regelmäßigen Rasenpflege mit dem Aufsitzmäher bis zur gründlichen Steinreinigung – ich biete
-                    Ihnen das komplette Paket für einen gepflegten Garten, in dem Sie sich wohlfühlen.</p>
-            </div>
-        </section>
-
-        <section class="leistung-detail">
-            <div class="leistung-bild">
-                <img src="Bilder/grasfläche.jpeg" alt="Aufsitzmäher auf großer Rasenfläche">
-            </div>
-            <div class="leistung-text">
-                <h2>Rasenpflege & Großflächen</h2>
-                <p>Ein sattes Grün erfordert regelmäßige und fachgerechte Pflege. Ich kümmere mich darum, dass Ihr Rasen
-                    stets gesund und kräftig wächst.</p>
-                <ul class="leistung-liste">
-                    <li>Präzises Mähen</li>
-                    <li>Schonend</li>
-                    <li>Aufsitzmäher für effizienteres Mähen</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="leistung-detail reverse">
-            <div class="leistung-text">
-                <h2>Stein- & Moosreinigung</h2>
-                <p>Mit der Zeit setzen Gehwege, Terrassen und Einfahrten Moos und Schmutz an. Ich bringe die
-                    ursprüngliche Farbe Ihrer Steine schonend zurück.</p>
-                <ul class="leistung-liste">
-                    <li>Effektive Hochdruckreinigung für Steine und Platten</li>
-                    <li>Nachhaltige Entfernung von Moos, Algen und Flechten</li>
-                    <li>Saubere Reinigung von Fugen und Randsteinen</li>
-                </ul>
-            </div>
-            <div class="leistung-bild">
-                <img src="Bilder/pflastersteine.jpeg" alt="Gereinigte Pflastersteine">
-            </div>
-        </section>
-
-        <section class="leistung-detail">
-            <div class="leistung-bild">
-                <img src="Bilder/hecke.jpeg" alt="Frisch geschnittene Hecke">
-            </div>
-            <div class="leistung-text">
-                <h2>Heckenschnitt & Beetpflege</h2>
-                <p>Sträucher und Beete sind die optischen Highlights jedes Gartens. Ich sorge für den richtigen Schnitt
-                    und unkrautfreie, saubere Flächen.</p>
-                <ul class="leistung-liste">
-                    <li>Fachgerechter Form- und Rückschnitt von Hecken und Sträuchern</li>
-                    <li>Unkrautentfernung und Auflockerung der Beetflächen</li>
-                    <li>Einsetzen von Neupflanzungen nach Ihren Wünschen</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="leistung-detail">
-            <div class="leistung-bild">
-                <img src="Bilder/muelltonnen108.jpeg" alt="Mülltonnen">
-            </div>
-            <div class="leistung-text">
-                <h2>Professionelle Mülltonnen-Reinigung</h2>
-                <p>Hygienische Reinigung und gründliches Ausspülen von Mülltonnen (Bio, Restmüll etc.) zur Vermeidung
-                    von unangenehmen Gerüchen und Ungeziefer.</p>
-                <ul class="leistung-liste">
-                    <li>Hygienisch</li>
-                    <li>Verbesserung des Geruchs</li>
-                    <li>Langanhaltende Frische</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="zusatz-leistungen">
-            <h2>Weitere Gartenarbeiten</h2>
-            <div class="zusatz-grid">
-
-                <div class="zusatz-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-leaf">
-                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.5 2 7c0 5.5-4.5 10-10 10Z" />
-                        <path d="M7 21c0-6.03 4.47-10.5 10.5-10.5" />
-                    </svg>
-                    <h4>Laub & Grünabfall</h4>
-                    <p>Zusammenrechen von Herbstlaub und fachgerechte Entsorgung von anfallendem Grünschnitt.</p>
+    <main id="inhalt">
+        <section class="hero hero--page">
+            <img class="hero__bg" src="Bilder/web/grasflaeche.webp" alt="" width="1500" height="1001" fetchpriority="high">
+            <div class="container hero__content">
+                <p class="eyebrow eyebrow--light">Leistungen</p>
+                <h1>Meine Leistungen für Ihr <em>grünes Paradies</em></h1>
+                <p class="hero__lead">Von der regelmäßigen Rasenpflege mit dem Aufsitzmäher bis zur gründlichen Steinreinigung – ich biete Ihnen das komplette Paket für einen gepflegten Garten, in dem Sie sich wohlfühlen.</p>
+                <div class="btn-group">
+                    <a href="#paket-buchung" class="btn btn--primary">Paket buchen</a>
+                    <a href="kontakt.html" class="btn btn--ghost">Individuell anfragen</a>
                 </div>
-
-                <div class="zusatz-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-snowflake">
-                        <path d="m10 20-2.5-2.5L5 20" />
-                        <path d="M12 22v-8" />
-                        <path d="m14 20 2.5-2.5L19 20" />
-                        <path d="m20 14-2.5-2.5L20 9" />
-                        <path d="M22 12h-8" />
-                        <path d="m20 10-2.5 2.5L19 15" />
-                        <path d="m14 4 2.5 2.5L19 4" />
-                        <path d="M12 2v8" />
-                        <path d="m10 4-2.5 2.5L5 4" />
-                        <path d="m4 10 2.5 2.5L4 15" />
-                        <path d="M2 12h8" />
-                        <path d="m4 14 2.5-2.5L5 9" />
-                    </svg>
-                    <h4>Regenrinne säubern</h4>
-                    <p>Effektives und gründliches Entfernen von Dreck in der Regenrinne</p>
-                </div>
-
-                <div class="zusatz-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-wrench">
-                        <path
-                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                    </svg>
-                    <h4>Pflege & Instandhaltung</h4>
-                    <p>Kleinere Ausbesserungsarbeiten im Garten, wie das Richten von Rasenkanten oder Wegen.</p>
-                </div>
-
-
-
             </div>
         </section>
 
-        <section class="paket-buchung" id="paket-buchung">
-            <h2>Ihre Buchung</h2>
-            <p>Wählen Sie gezielt die Leistung, die Sie benötigen. <br>Ganz einfach und unverbindlich.</p>
+        <div class="container">
+            <nav class="jump-nav" aria-label="Auf dieser Seite">
+                <a href="#rasenpflege">Rasen</a>
+                <a href="#steinreinigung">Steinreinigung</a>
+                <a href="#hecken-beete">Hecken &amp; Beete</a>
+                <a href="#muelltonnen">Mülltonnen</a>
+                <a href="#baumpflege">Bäume</a>
+                <a href="#laubbeseitigung">Laub</a>
+                <a href="#winterdienst">Winterdienst</a>
+                <a href="#weihnachtsbaum">Weihnachtsbaum</a>
+                <a href="#brennholz">Brennholz</a>
+                <a href="#paket-buchung">Buchung</a>
+            </nav>
+        </div>
 
-            <section class="allround-paket-section">
-                <div class="container">
-                    <div class="paket-box-wrapper">
+        <section class="section">
+            <div class="container feature-list">
+                <article class="feature-row" id="rasenpflege" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/rasentraktor.webp" alt="Aufsitzmäher auf großer Rasenfläche" width="1000" height="668" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 01</p>
+                        <h2>Rasenpflege &amp; Großflächen</h2>
+                        <p>Ein sattes Grün erfordert regelmäßige und fachgerechte Pflege. Ich kümmere mich darum, dass Ihr Rasen stets gesund und kräftig wächst.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Präzises Mähen</li>
+                            <li>Schonend</li>
+                            <li>Aufsitzmäher für effizienteres Mähen</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=rasenmaehen" class="link-arrow">Rasenmähen buchen</a>
+                    </div>
+                </article>
 
-                        <!-- Bild-Spalte -->
-                        <div class="paket-image">
-                            <img src="Bilder/sorglos.webp" alt="ABecks Allround Gartenpflege" loading="lazy">
-                            <span class="badge-bestseller">Beliebteste Wahl</span>
-                        </div>
+                <article class="feature-row feature-row--reverse" id="steinreinigung" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/pflaster.webp" alt="Gereinigte Pflastersteine" width="1000" height="667" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 02</p>
+                        <h2>Stein- &amp; Moosreinigung</h2>
+                        <p>Mit der Zeit setzen Gehwege, Terrassen und Einfahrten Moos und Schmutz an. Ich bringe die ursprüngliche Farbe Ihrer Steine schonend zurück.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Effektive Hochdruckreinigung für Steine und Platten</li>
+                            <li>Nachhaltige Entfernung von Moos, Algen und Flechten</li>
+                            <li>Saubere Reinigung von Fugen und Randsteinen</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=pflasterreinigung" class="link-arrow">Pflasterreinigung buchen</a>
+                    </div>
+                </article>
 
-                        <!-- Content-Spalte -->
-                        <div class="paket-content">
-                            <h2>Das ABecks Rundum-Sorglos-Paket</h2>
-                            <p class="paket-intro">
-                                Das Komplettangebot für Ihren Garten: Wir übernehmen die komplette Jahres- oder
-                                Saisonpflege, damit Ihr Garten immer perfekt aussieht.
-                            </p>
+                <article class="feature-row" id="hecken-beete" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/hecke.webp" alt="Frisch geschnittene Hecke" width="1100" height="733" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 03</p>
+                        <h2>Heckenschnitt &amp; Beetpflege</h2>
+                        <p>Sträucher und Beete sind die optischen Highlights jedes Gartens. Ich sorge für den richtigen Schnitt und unkrautfreie, saubere Flächen.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Fachgerechter Form- und Rückschnitt von Hecken und Sträuchern</li>
+                            <li>Unkrautentfernung und Auflockerung der Beetflächen</li>
+                            <li>Einsetzen von Neupflanzungen nach Ihren Wünschen</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=heckenschnitt" class="link-arrow">Heckenschnitt buchen</a>
+                    </div>
+                </article>
 
-                            <ul class="paket-checkliste">
-                                <li><span class="check-icon">✓</span> Regelmäßiges Rasenmähen & Kanten trimmen</li>
-                                <li><span class="check-icon">✓</span> Fachgerechter Hecken- & Strauchschnitt</li>
-                                <li><span class="check-icon">✓</span> Beetpflege & Unkrautentfernung</li>
-                                <li><span class="check-icon">✓</span> Gehweg- & Pflasterreinigung</li>
-                                <li><span class="check-icon">✓</span> Inklusive Abtransport aller Grünabfälle</li>
+                <article class="feature-row feature-row--reverse" id="muelltonnen" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/muelltonnen-gross.webp" alt="Saubere Mülltonnen in einer Reihe" width="1100" height="619" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 04</p>
+                        <h2>Professionelle Mülltonnen-Reinigung</h2>
+                        <p>Hygienische Reinigung und gründliches Ausspülen von Mülltonnen (Bio, Restmüll etc.) zur Vermeidung von unangenehmen Gerüchen und Ungeziefer.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Hygienisch</li>
+                            <li>Verbesserung des Geruchs</li>
+                            <li>Langanhaltende Frische</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=muelltonnen" class="link-arrow">Mülltonnen-Reinigung buchen</a>
+                    </div>
+                </article>
+
+                <article class="feature-row" id="baumpflege" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/baumpflege.webp" alt="Großer Baum auf einer Wiese" width="800" height="445" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 05</p>
+                        <h2>Baumpflege</h2>
+                        <p>Gesunde Bäume brauchen den richtigen Schnitt. Ich entferne Totholz und lichte Kronen fachgerecht aus – für mehr Licht und Sicherheit in Ihrem Garten.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Beseitigung von Totholz</li>
+                            <li>Fachgerechter Lichtungsschnitt</li>
+                            <li>Entsorgung des Schnittguts</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=baumpflege" class="link-arrow">Baumpflege buchen</a>
+                    </div>
+                </article>
+
+                <article class="feature-row feature-row--reverse" id="laubbeseitigung" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/laub.webp" alt="Buntes Herbstlaub" width="800" height="400" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 06</p>
+                        <h2>Laub &amp; Grünabfall</h2>
+                        <p>Im Herbst sammelt sich schnell viel Laub auf Rasen, Beeten und Wegen. Ich räume gründlich auf und kümmere mich um die fachgerechte Entsorgung.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Zusammenrechen von Herbstlaub</li>
+                            <li>Rasen- und Beetflächen säubern</li>
+                            <li>Abtransport und Entsorgung von Grünschnitt</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=laubbeseitigung" class="link-arrow">Laubbeseitigung buchen</a>
+                    </div>
+                </article>
+
+                <header class="feature-list__divider" data-reveal>
+                    <p class="eyebrow">Herbst &amp; Winter</p>
+                    <h2>Saisonale <em>Leistungen</em></h2>
+                </header>
+
+                <article class="feature-row" id="winterdienst" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/schneeschaufel.webp" alt="Schneeschaufel im Schnee" width="640" height="361" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 07</p>
+                        <h2>Winterdienst</h2>
+                        <p>Zuverlässiger Winterdienst für Privat- und Gewerbekunden. Ob Schneeräumung, Streudienst oder Glättebekämpfung – ich sorge den ganzen Winter über für sichere Wege, Einfahrten und Zugänge.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Schneeräumung auf Gehwegen und Einfahrten</li>
+                            <li>Streuen bei Glätte und Frost</li>
+                            <li>Für Privat- und Gewerbekunden</li>
+                        </ul>
+                        <a href="kontakt.html?paket=winterdienst" class="link-arrow">Winterdienst anfragen</a>
+                    </div>
+                </article>
+
+                <article class="feature-row feature-row--reverse" id="weihnachtsbaum" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/tannenwald.webp" alt="Verschneiter Nadelwald" width="640" height="427" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 08</p>
+                        <h2>Weihnachtsbaum-Lieferung</h2>
+                        <p>Den passenden Weihnachtsbaum bequem nach Hause liefern lassen – ohne Schleppen und ohne Parkplatzsuche. Größe, Sorte und Liefertermin stimmen wir individuell ab.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Bequeme Lieferung bis zu Ihnen nach Hause</li>
+                            <li>Größe und Sorte individuell abstimmen</li>
+                            <li>Liefertermin nach Absprache</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=weihnachtsbaum-liefern" class="link-arrow">Weihnachtsbaum bestellen</a>
+                    </div>
+                </article>
+
+                <article class="feature-row" id="brennholz" data-reveal>
+                    <div class="feature-row__media">
+                        <img src="Bilder/web/brennholz.webp" alt="Gestapeltes Brennholz" width="1100" height="733" loading="lazy">
+                    </div>
+                    <div class="feature-row__text">
+                        <p class="eyebrow">Leistung 09</p>
+                        <h2>Brennholz-Lieferung</h2>
+                        <p>Für gemütliche Abende am Kamin oder Ofen: Ich liefere Ihnen Brennholz bequem bis vor die Haustür. Menge und Liefertermin stimmen wir individuell ab.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Lieferung bis vor die Haustür</li>
+                            <li>Menge nach Ihrem Bedarf</li>
+                            <li>Liefertermin nach Absprache</li>
+                        </ul>
+                        <a href="kontakt.html?leistung=brennholz-liefern" class="link-arrow">Brennholz bestellen</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--tint extras">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Und außerdem</p>
+                    <h2>Weitere <em>Gartenarbeiten</em></h2>
+                </header>
+
+                <div class="extras__grid extras__grid--2">
+                    <article class="extra-card" data-reveal>
+                        <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-1.2-.6-2.3-1.8-3.3S7.3 6.6 7 5.3c-.3 1.3-1 2.7-2.2 3.7S3 11.1 3 12.3c0 2.2 1.8 4 4 4Z"/><path d="M12.6 6.6A11 11 0 0 0 14 3.5c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.9 5"/></svg></span>
+                        <h3>Regenrinne säubern</h3>
+                        <p>Effektives und gründliches Entfernen von Dreck in der Regenrinne.</p>
+                    </article>
+
+                    <article class="extra-card" data-reveal>
+                        <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+                        <h3>Pflege &amp; Instandhaltung</h3>
+                        <p>Kleinere Ausbesserungsarbeiten im Garten, wie das Richten von Rasenkanten oder Wegen.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section booking" id="paket-buchung">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Ihre Buchung</p>
+                    <h2>Leistung wählen, <em>Anfrage senden</em> – fertig</h2>
+                    <p>Wählen Sie gezielt die Leistung, die Sie benötigen. Ganz einfach und unverbindlich.</p>
+                </header>
+
+                <ol class="steps" data-reveal>
+                    <li><strong>Leistungen hinzufügen</strong><span>Paket oder Einzelleistungen – gerne auch mehrere.</span></li>
+                    <li><strong>Anfrage absenden</strong><span>Oben auf „Anfrage senden“ – Ihre Auswahl ist schon eingetragen.</span></li>
+                    <li><strong>Termin &amp; Angebot</strong><span>Ich melde mich persönlich bei Ihnen.</span></li>
+                </ol>
+
+                <article class="package" data-reveal>
+                    <div class="package__media">
+                        <img src="Bilder/web/sorglos.webp" alt="ABecks Allround Gartenpflege" width="1000" height="667" loading="lazy">
+                        <span class="package__badge">Beliebteste Wahl</span>
+                    </div>
+                    <div class="package__body">
+                        <p class="eyebrow">Komplettpaket</p>
+                        <h3>Das ABecks Rundum-Sorglos-Paket</h3>
+                        <p>Das Komplettangebot für Ihren Garten: Wir übernehmen die komplette Jahres- oder Saisonpflege, damit Ihr Garten immer perfekt aussieht.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Regelmäßiges Rasenmähen &amp; Kanten trimmen</li>
+                            <li>Fachgerechter Hecken- &amp; Strauchschnitt</li>
+                            <li>Beetpflege &amp; Unkrautentfernung</li>
+                            <li>Gehweg- &amp; Pflasterreinigung</li>
+                            <li>Inklusive Abtransport aller Grünabfälle</li>
+                        </ul>
+                        <a href="kontakt.html?paket=allround" class="btn btn--primary">Jetzt Allround-Paket buchen</a>
+                    </div>
+                </article>
+
+                <h3 class="booking__subtitle" data-reveal>Einzelleistungen buchen</h3>
+                <p class="booking__subtext" data-reveal>Wählen Sie gezielt einzelne Pflegedienste für Ihren Garten aus.</p>
+
+                <div class="book-grid">
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/hecke.webp" alt="Heckenschnitt" width="1100" height="733" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Heckenschnitt</h4>
+                            <ul class="mini-checks">
+                                <li>Form- &amp; Rückschnitt</li>
+                                <li>Schnittgutentsorgung</li>
                             </ul>
-
-                            <div class="paket-action">
-                                <!-- WICHTIG: Der Parameter ?paket=allround in der URL -->
-                                <a href="kontakt.html?paket=allround" class="btn btn-primary">Jetzt Allround-Paket
-                                    buchen</a>
-                            </div>
+                            <a href="kontakt.html?leistung=heckenschnitt" class="btn btn--outline">Jetzt buchen</a>
                         </div>
+                    </article>
 
-                    </div>
-                </div>
-            </section>
-            <section class="einzelleistungen-section">
-                <div class="container">
-                    <h3 class="einzelleistungen-titel">Einzelleistungen buchen</h3>
-                    <p class="einzelleistungen-untertitel">Wählen Sie gezielt einzelne Pflegedienste für Ihren Garten aus.
-                    </p>
-
-                    <div class="einzelleistungen-grid">
-
-                        <!-- Box 1 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/hecke.jpeg" alt="Heckenschnitt" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Heckenschnitt</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Form- & Rückschnitt</li>
-                                    <li><span class="check-icon">✓</span> Schnittgutentsorgung</li>
-                                </ul>
-                                <!-- HIER PARAMETER ÄNDERN (?leistung=heckenschnitt) -->
-                                <a href="kontakt.html?leistung=heckenschnitt" class="btn btn-secondary">Jetzt buchen</a>
-                            </div>
-                        </div>
-
-                        <!-- Box 2 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/mähen.jpg" alt="Rasenmähen" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Rasenmähen</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Mähen & Kanten trimmen</li>
-                                    <li><span class="check-icon">✓</span> Grasschnittentsorgung</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=rasenmaehen" class="btn btn-secondary">Jetzt buchen</a>
-                            </div>
-                        </div>
-
-                        <!-- Box 3 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/beetpflege.webp" alt="Beetpflege" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Beetpflege</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Unkrautentfernung</li>
-                                    <li><span class="check-icon">✓</span> Boden auflockern</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=beetpflege" class="btn btn-secondary">Jetzt buchen</a>
-                            </div>
-                        </div>
-
-                        <!-- Box 4 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/pflastersteine.jpeg" alt="Pflasterreinigung" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Pflasterreinigung</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Hochdruckreinigung</li>
-                                    <li><span class="check-icon">✓</span> Fugen nachsanden</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=pflasterreinigung" class="btn btn-secondary">Jetzt
-                                    buchen</a>
-                            </div>
-                        </div>
-
-                        <!-- Box 5 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/baumpflege.webp" alt="Baumpflege" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Baumpflege</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Totholzbeseitigung</li>
-                                    <li><span class="check-icon">✓</span> Lichtungsschnitt</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=baumpflege" class="btn btn-secondary">Jetzt buchen</a>
-                            </div>
-                        </div>
-
-                        <!-- Box 6 -->
-                        <div class="einzelleistung-card">
-                            <div class="card-image">
-                                <img src="Bilder/laub.webp" alt="Laubbeseitigung" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Laubbeseitigung</h3> <!-- HIER NAMEN ÄNDERN -->
-                                <ul class="card-checklist">
-                                    <li><span class="check-icon">✓</span> Rasen & Beete säubern</li>
-                                    <li><span class="check-icon">✓</span> Fachgerechte Entsorgung</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=laubbeseitigung" class="btn btn-secondary">Jetzt
-                                    buchen</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="saisonale-leistungen" id="saisonale-leistungen">
-                <div class="container">
-                    <div class="saison-header">
-                        <span class="saison-eyebrow">Neu im Saisonangebot</span>
-                        <h2>Winterdienst & Weihnachtsbäume</h2>
-                        <p>Auch in der kalten Jahreszeit sind Wege, Einfahrten und Grundstücke bei ABecks in guten Händen. Zusätzlich liefere ich Ihnen Ihren Weihnachtsbaum bequem direkt nach Hause.</p>
-                    </div>
-
-                    <div class="winter-paket-box">
-                        <div class="winter-paket-image">
-                            <img src="Bilder/jillwellington-fence-6835820_640.jpg" alt="Verschneiter Weg als Beispiel für den Winterdienst" loading="lazy">
-                            <span class="winter-paket-badge">Komplettpaket</span>
-                        </div>
-                        <div class="winter-paket-content">
-                            <h3>ABecks Winterdienst-Komplettpaket</h3>
-                            <p>Regelmäßige Betreuung für sichere Wege und freie Flächen während der Wintermonate. Geeignet für Privat- und Gewerbekunden.</p>
-                            <ul class="paket-checkliste">
-                                <li><span class="check-icon">✓</span> Regelmäßiges Schneeschippen</li>
-                                <li><span class="check-icon">✓</span> Streuen bei Glätte und Frost</li>
-                                <li><span class="check-icon">✓</span> Gehwege, Einfahrten und Zugänge</li>
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/maehen.webp" alt="Rasenmähen" width="1100" height="733" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Rasenmähen</h4>
+                            <ul class="mini-checks">
+                                <li>Mähen &amp; Kanten trimmen</li>
+                                <li>Grasschnittentsorgung</li>
                             </ul>
-                            <a href="kontakt.html?paket=winterdienst" class="btn btn-primary">Winterdienst anfragen</a>
+                            <a href="kontakt.html?leistung=rasenmaehen" class="btn btn--outline">Jetzt buchen</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="saison-einzelleistungen">
-                        <h3>Einzelne Saisonleistungen buchen</h3>
-                        <div class="saison-grid">
-                            <article class="einzelleistung-card">
-                                <div class="card-image">
-                                    <img src="Bilder/schneeschaufel.jpg" alt="Schneeschaufel im Schnee" loading="lazy">
-                                </div>
-                                <div class="card-content">
-                                    <h3>Schnee schippen</h3>
-                                    <ul class="card-checklist">
-                                        <li><span class="check-icon">✓</span> Gehwege und Einfahrten freiräumen</li>
-                                        <li><span class="check-icon">✓</span> Schneeräumung nach Bedarf</li>
-                                    </ul>
-                                    <a href="kontakt.html?leistung=schnee-schippen" class="btn btn-secondary">Schnee schippen buchen</a>
-                                </div>
-                            </article>
-
-                            <article class="einzelleistung-card">
-                                <div class="card-image">
-                                    <img src="Bilder/jan-mallander-slippery-road-567721_640.jpg" alt="Verschneite und glatte Straße" loading="lazy">
-                                </div>
-                                <div class="card-content">
-                                    <h3>Salz streuen</h3>
-                                    <ul class="card-checklist">
-                                        <li><span class="check-icon">✓</span> Streuen bei Glätte und Frost</li>
-                                        <li><span class="check-icon">✓</span> Zugänge und Einfahrten sichern</li>
-                                    </ul>
-                                    <a href="kontakt.html?leistung=salz-streuen" class="btn btn-secondary">Salz streuen buchen</a>
-                                </div>
-                            </article>
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/beet.webp" alt="Beetpflege" width="800" height="504" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Beetpflege</h4>
+                            <ul class="mini-checks">
+                                <li>Unkrautentfernung</li>
+                                <li>Boden auflockern</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=beetpflege" class="btn btn--outline">Jetzt buchen</a>
                         </div>
+                    </article>
 
-                        <div class="winter-paket-box weihnachtsbaum-box">
-                            <div class="winter-paket-image">
-                                <img src="Bilder/mirey2222-forest-7036479_640.jpg" alt="Wald mit Nadelbäumen für die Weihnachtsbaumlieferung" loading="lazy">
-                                <span class="winter-paket-badge">Einzelangebot</span>
-                            </div>
-                            <div class="winter-paket-content">
-                                <h3>Weihnachtsbaum liefern</h3>
-                                <p>Den passenden Weihnachtsbaum bequem nach Hause liefern lassen. Größe, Sorte und Liefertermin stimmen wir individuell ab.</p>
-                                <ul class="paket-checkliste">
-                                    <li><span class="check-icon">✓</span> Bequeme Lieferung nach Hause</li>
-                                    <li><span class="check-icon">✓</span> Größe und Sorte abstimmen</li>
-                                </ul>
-                                <a href="kontakt.html?leistung=weihnachtsbaum-liefern" class="btn btn-primary">Weihnachtsbaum liefern lassen</a>
-                            </div>
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/pflaster.webp" alt="Pflasterreinigung" width="1000" height="667" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Pflasterreinigung</h4>
+                            <ul class="mini-checks">
+                                <li>Hochdruckreinigung</li>
+                                <li>Fugen nachsanden</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=pflasterreinigung" class="btn btn--outline">Jetzt buchen</a>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/baumpflege.webp" alt="Baumpflege" width="800" height="445" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Baumpflege</h4>
+                            <ul class="mini-checks">
+                                <li>Totholzbeseitigung</li>
+                                <li>Lichtungsschnitt</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=baumpflege" class="btn btn--outline">Jetzt buchen</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/laub.webp" alt="Laubbeseitigung" width="800" height="400" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Laubbeseitigung</h4>
+                            <ul class="mini-checks">
+                                <li>Rasen &amp; Beete säubern</li>
+                                <li>Fachgerechte Entsorgung</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=laubbeseitigung" class="btn btn--outline">Jetzt buchen</a>
+                        </div>
+                    </article>
                 </div>
-            </section>
-
-        <section class="leistungen-cta">
-            <div class="cta-content">
-                <h2>Jeder Garten ist individuell. Mein Angebot auch.</h2>
-                <p>Da jeder Garten andere Anforderungen hat, schaue ich individuell was zu tun ist.</p>
-                <a href="kontakt.html" class="cta-button">Jetzt Termin vereinbaren</a>
             </div>
         </section>
 
-        
+        <section class="section section--winter" id="saisonale-leistungen">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Neu im Saisonangebot</p>
+                    <h2>Winterdienst, Weihnachtsbäume &amp; <em>Brennholz</em></h2>
+                    <p>Auch in der kalten Jahreszeit sind Wege, Einfahrten und Grundstücke bei ABecks in guten Händen. Zusätzlich liefere ich Ihnen Ihren Weihnachtsbaum und Brennholz bequem direkt nach Hause.</p>
+                </header>
+
+                <article class="package package--winter" data-reveal>
+                    <div class="package__media">
+                        <img src="Bilder/web/winter.webp" alt="Verschneiter Weg als Beispiel für den Winterdienst" width="640" height="427" loading="lazy">
+                        <span class="package__badge">Komplettpaket</span>
+                    </div>
+                    <div class="package__body">
+                        <p class="eyebrow">Privat- &amp; Gewerbekunden</p>
+                        <h3>ABecks Winterdienst-Komplettpaket</h3>
+                        <p>Regelmäßige Betreuung für sichere Wege und freie Flächen während der Wintermonate. Geeignet für Privat- und Gewerbekunden.</p>
+                        <ul class="check-list check-list--single">
+                            <li>Regelmäßiges Schneeschippen</li>
+                            <li>Streuen bei Glätte und Frost</li>
+                            <li>Gehwege, Einfahrten und Zugänge</li>
+                        </ul>
+                        <a href="kontakt.html?paket=winterdienst" class="btn btn--dark">Winterdienst anfragen</a>
+                    </div>
+                </article>
+
+                <h3 class="booking__subtitle" data-reveal>Einzelne Saisonleistungen buchen</h3>
+
+                <div class="book-grid book-grid--4">
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/schneeschaufel.webp" alt="Schneeschaufel im Schnee" width="640" height="361" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Schnee schippen</h4>
+                            <ul class="mini-checks">
+                                <li>Gehwege und Einfahrten freiräumen</li>
+                                <li>Schneeräumung nach Bedarf</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=schnee-schippen" class="btn btn--outline">Jetzt buchen</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media"><img src="Bilder/web/glatte-strasse.webp" alt="Verschneite und glatte Straße" width="640" height="427" loading="lazy"></div>
+                        <div class="book-card__body">
+                            <h4>Salz streuen</h4>
+                            <ul class="mini-checks">
+                                <li>Streuen bei Glätte und Frost</li>
+                                <li>Zugänge und Einfahrten sichern</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=salz-streuen" class="btn btn--outline">Jetzt buchen</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media">
+                            <img src="Bilder/web/tannenwald.webp" alt="Wald mit Nadelbäumen für die Weihnachtsbaumlieferung" width="640" height="427" loading="lazy">
+                            <span class="book-card__badge">Einzelangebot</span>
+                        </div>
+                        <div class="book-card__body">
+                            <h4>Weihnachtsbaum liefern</h4>
+                            <p>Den passenden Weihnachtsbaum bequem nach Hause liefern lassen. Größe, Sorte und Liefertermin stimmen wir individuell ab.</p>
+                            <ul class="mini-checks">
+                                <li>Bequeme Lieferung nach Hause</li>
+                                <li>Größe und Sorte abstimmen</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=weihnachtsbaum-liefern" class="btn btn--outline">Jetzt bestellen</a>
+                        </div>
+                    </article>
+
+                    <article class="book-card" data-reveal>
+                        <div class="book-card__media">
+                            <img src="Bilder/web/kaminfeuer.webp" alt="Brennendes Holz im Feuer" width="1100" height="733" loading="lazy">
+                            <span class="book-card__badge">Neu</span>
+                        </div>
+                        <div class="book-card__body">
+                            <h4>Brennholz liefern</h4>
+                            <p>Brennholz bequem bis vor die Haustür geliefert. Menge und Liefertermin stimmen wir individuell ab.</p>
+                            <ul class="mini-checks">
+                                <li>Lieferung bis vor die Haustür</li>
+                                <li>Menge nach Ihrem Bedarf</li>
+                            </ul>
+                            <a href="kontakt.html?leistung=brennholz-liefern" class="btn btn--outline">Jetzt bestellen</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <img class="cta__bg" src="Bilder/web/cta.webp" alt="" width="1500" height="655" loading="lazy">
+            <div class="container cta__content" data-reveal>
+                <h2>Jeder Garten ist individuell. <em>Mein Angebot auch.</em></h2>
+                <p>Da jeder Garten andere Anforderungen hat, schaue ich individuell, was zu tun ist.</p>
+                <div class="btn-group">
+                    <a href="kontakt.html" class="btn btn--primary">Jetzt Termin vereinbaren</a>
+                    <a href="tel:+4917663000681" class="btn btn--ghost">Direkt anrufen</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="main-footer">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3 class="footer-logo">ABecks Gartenarbeit</h3>
-                    <p>Ihr Garten in guten Händen</p>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="uebermich.html">Über mich</a></li>
-                        <li><a href="leistungen.html">Leistungen</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Rechtliches</h4>
-                    <ul>
-                        <li><a href="rechtliches.html#impressum">Impressum</a></li>
-                        <li><a href="rechtliches.html#datenschutz">Datenschutz</a></li>
-                    </ul>
-                </div>
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <img src="Bilder/logo-hell.webp" alt="ABecks Gartenarbeit" width="360" height="250" loading="lazy">
+                <p>Ihr Garten in guten Händen – zuverlässige Gartenpflege in Meckenheim und Umgebung.</p>
             </div>
 
-            <div class="footer-bottom">
-                <p>© 2026 ABecks | Alle Rechte vorbehalten</p>
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="leistungen.html#paket-buchung">Buchung</a></li>
+                    <li><a href="uebermich.html">Über mich</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
             </div>
-        </footer>
+
+            <div>
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="tel:+4917663000681">0176 63000681</a></li>
+                    <li><a href="mailto:alexander-beckhaus@outlook.com">alexander-beckhaus@outlook.com</a></li>
+                    <li>Am Feldrain 17<br>53340 Meckenheim</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Rechtliches</h3>
+                <ul>
+                    <li><a href="rechtliches.html#impressum">Impressum</a></li>
+                    <li><a href="rechtliches.html#datenschutz">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© 2026 ABecks Gartenarbeit · Alle Rechte vorbehalten</p>
+        </div>
+    </footer>
+
+    <a href="tel:+4917663000681" class="call-fab" aria-label="Jetzt anrufen: 0176 63000681">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>Anrufen</span>
+    </a>
+
     <script src="script.js"></script>
 </body>
 

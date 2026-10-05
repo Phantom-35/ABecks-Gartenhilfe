@@ -8,6 +8,7 @@
         content="Lernen Sie Alexander Beckhaus & ABecks Gartenarbeit kennen. Zuverlässige Gartenhilfe mit Leidenschaft, Erfahrung und persönlichem Service.">
     <title>ABecks Gartenarbeit | Über mich</title>
     <link rel="canonical" href="https://abecks-gartenhilfe.netlify.app/uebermich.html">
+    <meta name="theme-color" content="#1f4d36">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="ABecks Gartenarbeit">
@@ -19,123 +20,148 @@
     <meta name="twitter:title" content="Über ABecks Gartenarbeit in Meckenheim">
     <meta name="twitter:description" content="Persönlicher Gartenservice von Alexander Beckhaus.">
     <meta name="twitter:image" content="https://abecks-gartenhilfe.netlify.app/Bilder/uebermich-abschluss.webp">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="Bilder/web/galerie-schubkarre.webp" as="image">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="Bilder/logo.ico" type="image/x-icon">
-
-
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="Bilder/logo.jpeg" alt="Logo">
-            <span class="logo-name">ABecks Gartenarbeit</span>
-        </div>
+    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-        <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav id="main-navigation" aria-label="Hauptnavigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="uebermich.html" aria-current="page">Über mich</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html" class="brand" aria-label="ABecks Gartenarbeit – Startseite">
+                <img src="Bilder/logo.webp" alt="ABecks Gartenarbeit" width="360" height="250">
+            </a>
 
-    <main>
-        <section class="uebermich-hero">
-            <div class="uebermich-hero-content">
-                <h1>Über mich</h1>
-                <p>Ihre grüne Oase in guten Händen</p>
-            </div>
-        </section>
-
-        <section class="hinterstecken">
-            <div class="hinterstecken-bild">
-                <img src="Bilder/logo.jpeg" alt="Das Logo von ABecks">
-            </div>
-            <div class="hinterstecken-text">
-                <h2>Alexander Beckhaus</h2>
-                <p>
-                    Ich bin Ihr Gärtner aus der Region, und ich sorge dafür, dass Ihr Garten nicht nur Arbeit macht,
-                    sondern pure Freude bereitet!
-                </p>
-            </div>
-        </section>
-
-        <section class="versprechen">
-            <h2>Meine <span>Versprechen</span></h2>
-            <div class="versprechen-container">
-                <div class="versprechen-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <h4>Zuverlässigkeit</h4>
-                    <p>Ein Wort ist ein Wort. Ich komme, wenn wir es abgemacht haben.</p>
-                </div>
-
-                <div class="versprechen-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <h4>Modernes Equipment</h4>
-                    <p>Mein Equipment (inklusive Aufsitzmäher) garantiert schnelle und saubere Ergebnisse.</p>
-                </div>
-
-                <div class="versprechen-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <h4>Sauberkeit</h4>
-                    <p>Dreckige Wege nach der Arbeit gibt es bei mir nicht.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="nahbar">
-            <div class="nahbar-content">
-                <p class="nahbar-eyebrow">Persönlich für Sie da</p>
-                <h2>Ihr Garten darf sich <span>gut anfühlen.</span></h2>
-                <p class="nahbar-text">
-                    Ich freue mich darauf, Ihr Grundstück kennenzulernen und gemeinsam die passende Lösung für Ihren Garten zu finden.
-                </p>
-                <a href="kontakt.html" class="nahbar-button">Kontakt aufnehmen</a>
-            </div>
-            <div class="nahbar-image">
-                <img src="Bilder/uebermich-abschluss.webp" alt="Gepflegter Garten als Beispiel für die Arbeit von ABecks Gartenarbeit" loading="lazy">
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3 class="footer-logo">ABecks Gartenarbeit</h3>
-                <p>Ihr Garten in guten Händen</p>
-            </div>
-
-            <div class="footer-column">
-                <h4>Quick Links</h4>
+            <nav id="main-navigation" class="site-nav" aria-label="Hauptnavigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="uebermich.html">Über mich</a></li>
                     <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="leistungen.html#paket-buchung" class="site-nav__booking">Buchung</a></li>
+                    <li><a href="uebermich.html" aria-current="page">Über mich</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li class="site-nav__cta"><a href="tel:+4917663000681" class="btn btn--primary btn--sm">0176 63000681</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:+4917663000681" class="header-phone">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                <span>0176 63000681</span>
+            </a>
+
+            <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="inhalt">
+        <section class="hero hero--page hero--compact">
+            <img class="hero__bg" src="Bilder/web/galerie-schubkarre.webp" alt="" width="1500" height="1008" fetchpriority="high">
+            <div class="container hero__content">
+                <p class="eyebrow eyebrow--light">Über mich</p>
+                <h1>Ihre grüne Oase in <em>guten Händen</em></h1>
+            </div>
+        </section>
+
+        <section class="section about">
+            <div class="container about__grid">
+                <div class="about__logo" data-reveal>
+                    <img src="Bilder/logo.webp" alt="Das Logo von ABecks Gartenarbeit" width="360" height="250" loading="lazy">
+                </div>
+                <div class="about__text" data-reveal>
+                    <p class="eyebrow">Inhaber &amp; Ihr Ansprechpartner</p>
+                    <h2>Alexander Beckhaus</h2>
+                    <p class="about__quote">Ich bin Ihr Gärtner aus der Region, und ich sorge dafür, dass Ihr Garten nicht nur Arbeit macht, sondern pure Freude bereitet!</p>
+                    <div class="btn-group">
+                        <a href="kontakt.html" class="btn btn--dark">Kontakt aufnehmen</a>
+                        <a href="leistungen.html" class="link-arrow">Meine Leistungen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tint">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Darauf gebe ich mein Wort</p>
+                    <h2>Meine <em>Versprechen</em></h2>
+                </header>
+
+                <div class="extras__grid">
+                    <article class="extra-card" data-reveal>
+                        <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                        <h3>Zuverlässigkeit</h3>
+                        <p>Ein Wort ist ein Wort. Ich komme, wenn wir es abgemacht haben.</p>
+                    </article>
+
+                    <article class="extra-card" data-reveal>
+                        <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 8-6.4 8-10"/><path d="M21 4c-3 0-4 3-4 3s-3-1-4-3c-4 0-4 4-4 4s-3 1-4 3c0 4 4 4 4 4s1 3 3 4"/></svg></span>
+                        <h3>Modernes Equipment</h3>
+                        <p>Mein Equipment (inklusive Aufsitzmäher) garantiert schnelle und saubere Ergebnisse.</p>
+                    </article>
+
+                    <article class="extra-card" data-reveal>
+                        <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22c5.5-2.5 8-6.5 8-12V5l-8-3-8 3v5c0 5.5 2.5 9.5 8 12Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                        <h3>Sauberkeit</h3>
+                        <p>Dreckige Wege nach der Arbeit gibt es bei mir nicht.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container why__grid">
+                <div class="why__media" data-reveal>
+                    <img src="Bilder/web/uebermich-garten.webp" alt="Gepflegter Garten als Beispiel für die Arbeit von ABecks Gartenarbeit" width="1100" height="480" loading="lazy">
+                </div>
+                <div class="why__text" data-reveal>
+                    <p class="eyebrow">Persönlich für Sie da</p>
+                    <h2>Ihr Garten darf sich <em>gut anfühlen.</em></h2>
+                    <p class="lead">Ich freue mich darauf, Ihr Grundstück kennenzulernen und gemeinsam die passende Lösung für Ihren Garten zu finden.</p>
+                    <div class="btn-group">
+                        <a href="kontakt.html" class="btn btn--dark">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <img src="Bilder/logo-hell.webp" alt="ABecks Gartenarbeit" width="360" height="250" loading="lazy">
+                <p>Ihr Garten in guten Händen – zuverlässige Gartenpflege in Meckenheim und Umgebung.</p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="leistungen.html#paket-buchung">Buchung</a></li>
+                    <li><a href="uebermich.html">Über mich</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
 
-            <div class="footer-column">
-                <h4>Rechtliches</h4>
+            <div>
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="tel:+4917663000681">0176 63000681</a></li>
+                    <li><a href="mailto:alexander-beckhaus@outlook.com">alexander-beckhaus@outlook.com</a></li>
+                    <li>Am Feldrain 17<br>53340 Meckenheim</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Rechtliches</h3>
                 <ul>
                     <li><a href="rechtliches.html#impressum">Impressum</a></li>
                     <li><a href="rechtliches.html#datenschutz">Datenschutz</a></li>
@@ -143,10 +169,16 @@
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 ABecks | Alle Rechte vorbehalten</p>
+        <div class="container site-footer__bottom">
+            <p>© 2026 ABecks Gartenarbeit · Alle Rechte vorbehalten</p>
         </div>
     </footer>
+
+    <a href="tel:+4917663000681" class="call-fab" aria-label="Jetzt anrufen: 0176 63000681">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>Anrufen</span>
+    </a>
+
     <script src="script.js"></script>
 </body>
 

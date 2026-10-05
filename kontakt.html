@@ -8,6 +8,7 @@
     content="Jetzt Kontakt zu ABecks Gartenarbeit in Meckenheim aufnehmen. Schnelle Anfrage per Kontaktformular, Telefon oder E-Mail – wir beraten Sie gerne!">
   <title>ABecks Gartenarbeit | Kontakt</title>
   <link rel="canonical" href="https://abecks-gartenhilfe.netlify.app/kontakt.html">
+  <meta name="theme-color" content="#1f4d36">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="ABecks Gartenarbeit">
@@ -19,355 +20,286 @@
   <meta name="twitter:title" content="Kontakt | ABecks Gartenarbeit in Meckenheim">
   <meta name="twitter:description" content="Unverbindliche Anfrage für Gartenpflege in Meckenheim und Umgebung.">
   <meta name="twitter:image" content="https://abecks-gartenhilfe.netlify.app/Bilder/hero-index.jpg">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="Bilder/web/kontakt-hero.webp" as="image">
+  <link rel="stylesheet" href="styles.css" />
   <link rel="shortcut icon" href="Bilder/logo.ico" type="image/x-icon" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="Bilder/logo.jpeg" alt="Logo" />
-      <span class="logo-name">ABecks Gartenarbeit</span>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="ABecks Gartenarbeit – Startseite">
+        <img src="Bilder/logo.webp" alt="ABecks Gartenarbeit" width="360" height="250">
+      </a>
+
+      <nav id="main-navigation" class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="leistungen.html#paket-buchung" class="site-nav__booking">Buchung</a></li>
+          <li><a href="uebermich.html">Über mich</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+          <li class="site-nav__cta"><a href="tel:+4917663000681" class="btn btn--primary btn--sm">0176 63000681</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+4917663000681" class="header-phone">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>0176 63000681</span>
+      </a>
+
+      <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-
-    <button class="burger-menu" id="burgerBtn" type="button" aria-label="Menü öffnen" aria-controls="main-navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav id="main-navigation" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="leistungen.html">Leistungen</a></li>
-        <li><a href="uebermich.html">Über mich</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <section class="kontakt-hero">
-      <div class="kontakt-content">
-        <h1>Lassen Sie uns Ihren <span>Garten</span> planen</h1>
-        <p>
-          Egal ob Einmal-Einsatz oder regelmäßige Pflege – ich melde mich
-          zeitnah bei Ihnen zurück.
-        </p>
+  <main id="inhalt">
+    <section class="hero hero--page hero--compact">
+      <img class="hero__bg" src="Bilder/web/kontakt-hero.webp" alt="" width="1500" height="1000" fetchpriority="high">
+      <div class="container hero__content">
+        <p class="eyebrow eyebrow--light">Kontakt</p>
+        <h1>Lassen Sie uns Ihren <em>Garten</em> planen</h1>
+        <p class="hero__lead">Egal ob Einmal-Einsatz oder regelmäßige Pflege – ich melde mich zeitnah bei Ihnen zurück.</p>
       </div>
     </section>
 
-    <section class="kontakt-grid-container">
-      <!-- Linke Seite: Direkte Kontaktwege -->
-      <div class="kontakt-info">
-        <h2>Direkter Kontakt</h2>
-        <p>
-          Sie haben es eilig? Dann rufen Sie mich am besten direkt an oder
-          schreiben Sie mir eine WhatsApp.
-        </p>
+    <section class="contact">
+      <div class="container contact__grid">
+        <!-- Linke Seite: Direkte Kontaktwege -->
+        <aside class="contact__info">
+          <h2>Direkter Kontakt</h2>
+          <p>Sie haben es eilig? Dann rufen Sie mich am besten direkt an oder schreiben Sie mir eine WhatsApp.</p>
 
-        <div class="info-links">
-          <a href="tel:+4917663000681" class="info-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            <span>+49 176 63000681</span>
-          </a>
+          <div class="info-links">
+            <a href="tel:+4917663000681" class="info-card">
+              <span class="info-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <span class="info-card__text"><small>Telefon &amp; WhatsApp</small>+49 176 63000681</span>
+            </a>
 
-          <a href="mailto:alexander-beckhaus@outlook.com" class="info-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-            <span>alexander-beckhaus@outlook.com</span>
-          </a>
+            <a href="mailto:alexander-beckhaus@outlook.com" class="info-card">
+              <span class="info-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <span class="info-card__text"><small>E-Mail</small>alexander-beckhaus@outlook.com</span>
+            </a>
 
-          <a href="https://www.instagram.com/abecks_garten" target="_blank" rel="noopener noreferrer" class="info-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-            </svg>
-            <span>Folgen Sie mir auf Instagram</span>
-          </a>
+            <a href="https://www.instagram.com/abecks_garten" target="_blank" rel="noopener noreferrer" class="info-card">
+              <span class="info-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></span>
+              <span class="info-card__text"><small>Instagram</small>Folgen Sie mir auf Instagram</span>
+            </a>
 
-          <!-- NEU: Google-Bewertung -->
-          <a href="https://search.google.com/local/writereview?placeid=ChIJf6sIyBMdv0cRXvU0mljqxgQ" target="_blank"
-            rel="noopener noreferrer" class="info-card">
-            <svg width="24" height="24" viewBox="0 0 24 24" class="google-icon">
-              <path fill="#4285F4"
-                d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z" />
-              <path fill="#34A853"
-                d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.26v3.15C3.25 21.32 7.31 24 12 24z" />
-              <path fill="#FBBC05"
-                d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.26C.46 8.22 0 10.06 0 12s.46 3.78 1.26 5.39l4.02-3.15z" />
-              <path fill="#EA4335"
-                d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.68 1.26 6.61l4.02 3.15c.95-2.85 3.6-4.96 6.72-4.96z" />
-            </svg>
-            <span>Jetzt auf
-              <strong class="google-text"><span class="g-blue">G</span><span class="g-red">o</span><span
-                  class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span
-                  class="g-red">e</span></strong>
-              bewerten</span>
-          </a>
-        </div>
-      </div>
-
-
-
-      <!-- Rechte Seite: Kontaktformular -->
-      <div class="kontakt-formular">
-        <!-- Der neue Wrapper umschließt alles -->
-        <div id="form-wrapper">
-
-          <!-- ========================================================= -->
-          <!-- HIER DEN NEUEN BLOCK EINFÜGEN:                            -->
-          <!-- ========================================================= -->
-          <div id="paket-spezifikation" class="paket-card" style="display: none;">
-            <div class="paket-header">
-              <span class="paket-badge">Ihre Paketauswahl</span>
-              <div class="paket-title-row">
-                <h3 id="paket-titel">Allround-Gartenpaket</h3>
-                <span class="paket-preis" id="paket-preis">Festpreis / Nach Besichtigung</span>
-              </div>
-            </div>
-
-            <div class="paket-body">
-              <p class="paket-subtitle">In Ihrem gewählten Paket enthalten:</p>
-              <ul class="paket-features" id="paket-features">
-                <li><span class="check-icon">✓</span> Rasenmähen & Kanten pflegen</li>
-                <li><span class="check-icon">✓</span> Hecken- & Strauchschnitt</li>
-                <li><span class="check-icon">✓</span> Unkraut- & Beetpflege</li>
-                <li><span class="check-icon">✓</span> Stein- & Gehwegreinigung</li>
-                <li><span class="check-icon">✓</span> Fachgerechte Grünabfallentsorgung</li>
-              </ul>
-            </div>
-
-            <div class="paket-info-box">
-              <p><strong>So geht es weiter:</strong> Nach dem Absenden prüfen wir Ihre Anfrage und melden uns
-                innerhalb von 24 Stunden per E-Mail oder Telefon für einen kurzen Abstimmungstermin.</p>
-            </div>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJf6sIyBMdv0cRXvU0mljqxgQ" target="_blank" rel="noopener noreferrer" class="info-card">
+              <span class="info-card__icon info-card__icon--google">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.26v3.15C3.25 21.32 7.31 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.26C.46 8.22 0 10.06 0 12s.46 3.78 1.26 5.39l4.02-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.68 1.26 6.61l4.02 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+                </svg>
+              </span>
+              <span class="info-card__text"><small>Google</small>Jetzt auf Google bewerten</span>
+            </a>
           </div>
-          <!-- ========================================================= -->
 
+          <div class="contact__note">
+            <strong>Antwort in der Regel innerhalb von 24 Stunden</strong>
+            <span>Einsatzgebiet: Meckenheim &amp; 20 km Umkreis</span>
+          </div>
+        </aside>
 
-          <!-- Das Formular -->
-          <form id="kontakt-form" action="https://formspree.io/f/mrejever" method="POST">
-            <!-- Tipp: Verstecktes Feld für den Mail-Betreff bei Formspree -->
-            <input type="hidden" id="betreff" name="_subject" value="Allgemeine Kontaktanfrage" />
+        <!-- Rechte Seite: Kontaktformular -->
+        <div class="contact__form">
+          <div id="form-wrapper">
 
-            <!-- Visuelle Vorschau der gewählten Leistung -->
-<div id="buchung-ueberblick" class="buchung-ueberblick" style="display: none;">
-    ✓ Sie wählen aktuell: <strong id="gewaehlte-leistung-text"></strong>
-</div>
-
-<!-- Verstecktes Eingabefeld für den Formular-Versand -->
-<input type="hidden" id="leistung-select" name="leistung" value="Allgemeine Anfrage">
-
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Ihr Name" autocomplete="name" required />
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" placeholder="ihre@mail.de" autocomplete="email" required />
+            <!-- Wird per ?paket= / ?leistung= in script.js eingeblendet -->
+            <!-- Wird aus der Leistungsauswahl (script.js) befüllt -->
+            <div id="paket-spezifikation" class="selection-card" hidden>
+              <div class="selection-card__head">
+                <span class="selection-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="selection-card__title">
+                  <span class="paket-badge">Ihre Auswahl</span>
+                  <h3 id="paket-titel"></h3>
+                </div>
+                <a href="leistungen.html#paket-buchung" class="selection-card__change">+ Weitere</a>
               </div>
+
+              <ul class="selection-list" id="auswahl-liste"></ul>
+
+              <p class="selection-card__info">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Unverbindliche Anfrage – nach dem Absenden melde ich mich innerhalb von 24 Stunden per E-Mail oder Telefon für einen kurzen Abstimmungstermin.</span>
+              </p>
+            </div>
+
+            <form id="kontakt-form" class="form" action="https://formspree.io/f/mrejever" method="POST">
+              <h2 class="form__title">Anfrage senden</h2>
+
+              <!-- Verstecktes Feld für den Mail-Betreff bei Formspree -->
+              <input type="hidden" id="betreff" name="_subject" value="Allgemeine Kontaktanfrage" />
+
+              <!-- Verstecktes Eingabefeld für den Formular-Versand -->
+              <input type="hidden" id="leistung-select" name="leistung" value="Allgemeine Anfrage">
+
               <div class="form-group">
-                <label for="telefon">Telefonnummer</label>
-                <input type="tel" id="telefon" name="telefon" placeholder="0176 / ..." autocomplete="tel" required />
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" autocomplete="name" required />
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="nachricht">Was ist zu tun?</label>
-              <textarea id="nachricht" name="nachricht" rows="5"
-                placeholder="Beschreiben Sie kurz Ihr Projekt (z.B. Rasen mähen, Heckenschnitt...)" required></textarea>
-            </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">E-Mail</label>
+                  <input type="email" id="email" name="email" placeholder="ihre@mail.de" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="telefon">Telefonnummer</label>
+                  <input type="tel" id="telefon" name="telefon" placeholder="0176 / ..." autocomplete="tel" required />
+                </div>
+              </div>
 
-            <div class="form-group checkbox-group">
+              <div class="form-group">
+                <label for="nachricht">Was ist zu tun?</label>
+                <textarea id="nachricht" name="nachricht" rows="5" placeholder="Beschreiben Sie kurz Ihr Projekt (z.B. Rasen mähen, Heckenschnitt...)" required></textarea>
+              </div>
+
               <label class="checkbox-label" for="datenschutz">
                 <input type="checkbox" id="datenschutz" name="datenschutz" required />
-                <span class="custom-checkbox"></span>
                 <span class="checkbox-text">
-                  Ich habe die
-                  <a href="rechtliches.html#datenschutz" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
-                  gelesen und stimme der Verarbeitung meiner Daten zur
-                  Bearbeitung meiner Anfrage zu.
+                  Ich habe die <a href="rechtliches.html#datenschutz" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
+                  gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.
                   <span class="required-asterisk">*</span>
                 </span>
               </label>
+
+              <button type="submit" class="btn btn--dark submit-btn">Anfrage absenden</button>
+            </form>
+
+            <!-- Die Erfolgsmeldung (standardmäßig versteckt) -->
+            <div id="success-message" class="form-success" style="display: none;">
+              <span class="form-success__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <h3>Nachricht versendet!</h3>
+              <p>Vielen Dank. Ich werde mich so schnell wie möglich bei Ihnen melden, um einen Termin zu vereinbaren!</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <button type="submit" class="submit-btn">Anfrage absenden</button>
-          </form>
+    <!-- So läuft die Zusammenarbeit -->
+    <section class="section section--tint">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">So einfach geht's</p>
+          <h2>Von der Anfrage zum <em>gepflegten Garten</em></h2>
+        </header>
 
-          <!-- Die Erfolgsmeldung (standardmäßig versteckt) -->
-          <div id="success-message" style="
-        display: none;
-        text-align: center;
-        padding: 40px;
-        background: #e8f5e9;
-        border-radius: 12px;
-        border: 1px solid #c8e6c9;
-      ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-              style="margin-bottom: 15px">
-              <polyline points="20 6 9 17 4 12"></polyline>
+        <div class="extras__grid">
+          <article class="extra-card" data-reveal>
+            <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+            <h3>1. Kurz melden</h3>
+            <p>Per Formular, Telefon oder WhatsApp – erzählen Sie mir einfach, was in Ihrem Garten ansteht.</p>
+          </article>
+
+          <article class="extra-card" data-reveal>
+            <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3>2. Besichtigung &amp; Angebot</h3>
+            <p>Ich schaue mir Ihr Grundstück an und mache Ihnen ein klares, unverbindliches Angebot.</p>
+          </article>
+
+          <article class="extra-card" data-reveal>
+            <span class="extra-card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5 8-6.4 8-10"/><path d="M21 4c-3 0-4 3-4 3s-3-1-4-3c-4 0-4 4-4 4s-3 1-4 3c0 4 4 4 4 4s1 3 3 4"/></svg></span>
+            <h3>3. Zurücklehnen</h3>
+            <p>Ich erledige die Arbeit zum vereinbarten Termin – sauber, zuverlässig und inklusive Entsorgung.</p>
+          </article>
+        </div>
+
+        <p class="review-prompt" data-reveal>Sie waren bereits Kunde? Über eine ehrliche Bewertung freue ich mich sehr.</p>
+        <div class="section-foot">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJf6sIyBMdv0cRXvU0mljqxgQ" target="_blank" rel="noopener noreferrer" class="google-review">
+            <svg class="google-review__icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.26v3.15C3.25 21.32 7.31 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.26C.46 8.22 0 10.06 0 12s.46 3.78 1.26 5.39l4.02-3.15z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.68 1.26 6.61l4.02 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
             </svg>
-            <h3 style="
-          font-family: Montserrat, sans-serif;
-          color: #2d332d;
-          margin-bottom: 10px;
-        ">
-              Nachricht versendet!
-            </h3>
-            <p style="font-family: Lato, sans-serif; color: #4a4a4a">
-              Vielen Dank. Ich werde mich so schnell wie möglich bei Ihnen
-              melden um einen Termin zu vereinbaren!
-            </p>
-          </div>
+            <span>Jetzt auf Google bewerten</span>
+            <span class="google-review__stars" aria-hidden="true">★★★★★</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Sektion: Kundenstimmen / Bewertungen -->
-    <section class="kundenstimmen-section">
-      <div class="kundenstimmen-header">
-        <span class="kundenstimmen-subtitle">KUNDENSTIMMEN</span>
-        <h2>Das sagen unsere <span>Kunden</span></h2>
-        <div class="rating-badge">★ 4.8 · Google-Bewertungen</div>
-      </div>
-
-      <div class="bewertungen-grid">
-        <!-- Karte 1 -->
-        <div class="bewertung-card">
-          <div class="stars">★★★★★</div>
-          <p class="bewertung-text">
-            „Ich bin absolut begeistert von der Arbeit! Meine Hecke und die
-            Sträucher wurden extrem sauber und präzise geschnitten. Die beiden
-            arbeiten super pünktlich, zügig und hinterlassen den Garten
-            blitzblank. Man merkt sofort, dass hier mit Leidenschaft
-            gearbeitet wird. Werde ABecks definitiv wieder beauftragen!“
-          </p>
-          <div class="bewertung-autor">
-            <strong>Klaus M</strong> · <span>vor zwei Wochen</span>
-          </div>
+    <!-- Einsatzradius & Map -->
+    <section class="section area">
+      <div class="container area__grid">
+        <div class="area__text" data-reveal>
+          <p class="eyebrow">Einsatzgebiet</p>
+          <h2>Einsatzgebiet &amp; <em>Radius</em></h2>
+          <p>Ich bin im Umkreis von max. <strong>20 km rund um Meckenheim</strong> für Sie im Einsatz. Dazu gehören unter anderem Merl, Flerzheim und Meckenheim.</p>
+          <ul class="area__tags">
+            <li>Meckenheim</li>
+            <li>Merl</li>
+            <li>Flerzheim</li>
+            <li>+ 20 km Umkreis</li>
+          </ul>
         </div>
-
-        <!-- Karte 2 -->
-        <div class="bewertung-card">
-          <div class="stars">★★★★★</div>
-          <p class="bewertung-text">
-            „Ein riesiges Dankeschön für die tolle Unterstützung! Meine Beete
-            waren komplett zugewachsen und wurden im Handumdrehen wieder in
-            Schuss gebracht. Die Beratung war ehrlich, die Kommunikation per
-            WhatsApp unkompliziert und das Ergebnis kann sich wirklich sehen
-            lassen. Sehr zu empfehlen!“
-          </p>
-          <div class="bewertung-autor">
-            <strong>Laura B</strong> · <span>vor einem Monat</span>
-          </div>
-        </div>
-
-        <!-- Karte 3 -->
-        <div class="bewertung-card">
-          <div class="stars">★★★★★</div>
-          <p class="bewertung-text">
-            „Pünktlich, freundlich und absolut faire Preise. ABecks übernimmt
-            bei uns mittlerweile die regelmäßige Rasen- und Gartenpflege. Wir
-            müssen uns um nichts mehr kümmern und der Garten sieht das ganze
-            Jahr über top gepflegt aus. Ein rundum toller Service!“
-          </p>
-          <div class="bewertung-autor">
-            <strong>Stefan G</strong> · <span>vor zwei Monaten</span>
-          </div>
+        <div class="area__map" data-reveal>
+          <img src="Bilder/web/radius.webp" alt="Karte des Einsatzgebiets: 20 km rund um Meckenheim" width="1600" height="570" loading="lazy" />
         </div>
       </div>
     </section>
-
-    <section class="bewertung-section">
-      <a href="https://search.google.com/local/writereview?placeid=ChIJf6sIyBMdv0cRXvU0mljqxgQ" target="_blank"
-        rel="noopener noreferrer" class="google-review-btn">
-        <!-- Offizielles Google G-Logo als SVG -->
-        <svg class="google-icon" width="20" height="20" viewBox="0 0 24 24">
-          <path fill="#4285F4"
-            d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z" />
-          <path fill="#34A853"
-            d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.26v3.15C3.25 21.32 7.31 24 12 24z" />
-          <path fill="#FBBC05"
-            d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.26C.46 8.22 0 10.06 0 12s.46 3.78 1.26 5.39l4.02-3.15z" />
-          <path fill="#EA4335"
-            d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.68 1.26 6.61l4.02 3.15c.95-2.85 3.6-4.96 6.72-4.96z" />
-        </svg>
-
-        <span>Jetzt auf </span>
-        <span class="google-text">
-          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span
-            class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
-        </span>
-        <span> bewerten</span>
-      </a>
-    </section>
-
-    <!-- Sektion 3: Einsatzradius & Map -->
-    <section class="einsatzbereich">
-      <div class="einsatz-text">
-        <h2>Einsatzgebiet & <span>Radius</span></h2>
-        <p>
-          Ich bin im Umkreis von max.
-          <strong>20 km rund um Meckenheim</strong> für Sie im Einsatz. Dazu
-          gehören unter anderem Merl, Flerzheim und Meckenheim.
-        </p>
-      </div>
-
-      <div class="map-container">
-        <!-- Platzhalter für die Map mit Radius-Kreis -->
-        <div class="map-placeholder">
-          <img src="Bilder/radius.webp" alt="Karte Einsatzgebiet" />
-        </div>
-      </div>
-    </section>
-
   </main>
 
-    <footer class="main-footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3 class="footer-logo">ABecks Gartenarbeit</h3>
-          <p>Ihr Garten in guten Händen</p>
-        </div>
-
-        <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="uebermich.html">Über mich</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Rechtliches</h4>
-          <ul>
-            <li><a href="rechtliches.html#impressum">Impressum</a></li>
-            <li><a href="rechtliches.html#datenschutz">Datenschutz</a></li>
-          </ul>
-        </div>
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="Bilder/logo-hell.webp" alt="ABecks Gartenarbeit" width="360" height="250" loading="lazy">
+        <p>Ihr Garten in guten Händen – zuverlässige Gartenpflege in Meckenheim und Umgebung.</p>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 ABecks | Alle Rechte vorbehalten</p>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="leistungen.html#paket-buchung">Buchung</a></li>
+          <li><a href="uebermich.html">Über mich</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
       </div>
-    </footer>
+
+      <div>
+        <h3>Kontakt</h3>
+        <ul>
+          <li><a href="tel:+4917663000681">0176 63000681</a></li>
+          <li><a href="mailto:alexander-beckhaus@outlook.com">alexander-beckhaus@outlook.com</a></li>
+          <li>Am Feldrain 17<br>53340 Meckenheim</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="rechtliches.html#impressum">Impressum</a></li>
+          <li><a href="rechtliches.html#datenschutz">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© 2026 ABecks Gartenarbeit · Alle Rechte vorbehalten</p>
+    </div>
+  </footer>
+
+  <a href="tel:+4917663000681" class="call-fab" aria-label="Jetzt anrufen: 0176 63000681">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span>Anrufen</span>
+  </a>
 
   <script src="script.js"></script>
 </body>
