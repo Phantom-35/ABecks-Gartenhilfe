@@ -104,7 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Buchungs-Buttons auf der Leistungsseite werden zu Auswahl-Schaltern
-  const toggles = isContactPage ? [] : [...document.querySelectorAll('main a[href^="kontakt.html?"]')].filter(link => services[keyFromLink(link)]);
+  // Netlify schreibt "kontakt.html?…" zu "/kontakt?…" um – deshalb über den aufgelösten Pfad erkennen
+  const isContactLink = link => /\/kontakt(\.html)?$/.test(link.pathname);
+  const toggles = isContactPage ? [] : [...document.querySelectorAll('main a[href*="kontakt"]')].filter(link => isContactLink(link) && services[keyFromLink(link)]);
   toggles.forEach(link => {
     const key = keyFromLink(link);
     const isPackage = Boolean(services[key].includes);
