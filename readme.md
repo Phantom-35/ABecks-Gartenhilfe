@@ -1,6 +1,6 @@
-# 🌿 ABecks Gartenarbeit – Official Website
+# 🌿 ABecks Gartenservice – Official Website
 
-A modern, fully responsive, and GDPR-compliant website for **ABecks Gartenarbeit** (Meckenheim & surrounding area). The website showcases gardening services, before-and-after project comparisons, and enables direct customer inquiries.
+A modern, fully responsive, and GDPR-compliant website for **ABecks Gartenservice** (Meckenheim & surrounding area). The website showcases gardening services, before-and-after project comparisons, and enables direct customer inquiries.
 
 ---
 

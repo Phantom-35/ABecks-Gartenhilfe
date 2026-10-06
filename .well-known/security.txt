@@ -1,4 +1,4 @@
-# Security contact information for ABecks Gartenarbeit
+# Security contact information for ABecks Gartenservice
 Contact: mailto:alexander-beckhaus@outlook.com
 Expires: 2027-08-18T12:00:00.000Z
 Preferred-Languages: de, en
