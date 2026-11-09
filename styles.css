@@ -916,6 +916,24 @@ p { margin: 0; }
     margin-bottom: 1.8rem;
     color: var(--muted);
 }
+.winter__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: -.6rem 0 1.8rem;
+    padding: 0;
+    list-style: none;
+}
+.winter__tags li {
+    padding: .35rem .85rem;
+    border-radius: 999px;
+    background: #dceaf3;
+    color: #1d4a66;
+    font-family: var(--font-head);
+    font-size: .8rem;
+    font-weight: 700;
+}
+.winter__text .btn-group { align-items: center; gap: 1.5rem; }
 .winter__media img {
     width: 100%;
     height: 100%;
@@ -1215,6 +1233,23 @@ p { margin: 0; }
 .package--winter { border-color: #b9d3e3; }
 .package--winter .package__badge { background: #dceaf3; color: #1d4a66; }
 .package--winter .eyebrow { color: #3c6e8f; }
+
+/* Weihnachts-Paket: dunkel und warm, hebt sich vom blauen Winterdienst ab */
+.package + .package { margin-top: 2rem; }
+.package--reverse { grid-template-columns: 1.05fr 1fr; }
+.package--reverse .package__media { order: 2; }
+.package--festive {
+    border-color: #c2873a;
+    background: radial-gradient(120% 140% at 0% 0%, #3a2420 0%, #1c1418 55%, #141016 100%);
+    color: #efe6d6;
+}
+.package--festive .package__badge { background: #b3363d; color: var(--white); }
+.package--festive .eyebrow { color: var(--accent); }
+.package--festive .package__body h3 { color: var(--white); }
+.package--festive .package__body > p:not(.eyebrow) { color: rgba(239, 230, 214, .78); }
+.package--festive .check-list li { color: #f6eedf; }
+.package--festive .check-list li::before { background-color: #b3363d; }
+.package--festive.is-selected { box-shadow: 0 0 0 2px var(--accent), var(--shadow); }
 
 .booking__subtitle {
     margin: 5rem 0 .5rem;
@@ -2197,6 +2232,7 @@ p { margin: 0; }
     .feature-row__media img { aspect-ratio: 4 / 3; }
 
     .package__media img { min-height: 0; aspect-ratio: 16 / 10; }
+    .package--reverse .package__media { order: 0; }
 
     .steps { gap: 1.25rem; max-width: 420px; }
 

@@ -60,7 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'schnee-schippen': { title: 'Schnee schippen', price: 'Nach Fläche und Aufwand', features: ['Gehwege & Einfahrten freiräumen', 'Räumung nach Bedarf'] },
     'salz-streuen': { title: 'Salz streuen', price: 'Nach Fläche und Aufwand', features: ['Streuen bei Glätte und Frost', 'Zugänge sichern'] },
     'weihnachtsbaum-liefern': { title: 'Weihnachtsbaum liefern', price: 'Nach Größe, Sorte und Liefergebiet', features: ['Lieferung nach Hause', 'Größe & Sorte abstimmen'] },
-    'brennholz-liefern': { title: 'Brennholz liefern', price: 'Nach Menge und Liefergebiet', features: ['Lieferung bis vor die Haustür', 'Menge nach Bedarf'] }
+    'brennholz-liefern': { title: 'Brennholz liefern', price: 'Nach Menge und Liefergebiet', features: ['Lieferung bis vor die Haustür', 'Menge nach Bedarf'] },
+    weihnachten: { title: 'Weihnachts-Paket', price: 'Nach Umfang / Besichtigung', features: ['Lichterketten montieren', 'Außendeko aufstellen', 'Weihnachtsbaum liefern & aufstellen', 'Abbau im Januar'], includes: ['lichterketten', 'weihnachtsdeko', 'weihnachtsbaum-liefern'] },
+    lichterketten: { title: 'Lichterketten aufhängen', price: 'Nach Umfang und Höhe', features: ['Dachkante, Fassade, Bäume & Hecken', 'Abbau nach Absprache'] },
+    weihnachtsdeko: { title: 'Weihnachtsdeko aufstellen', price: 'Nach Aufwand', features: ['Außendeko aufbauen & arrangieren', 'Abbau nach Absprache'] }
   };
   const STORAGE_KEY = 'abecks-auswahl';
   let memorySelection = [];
